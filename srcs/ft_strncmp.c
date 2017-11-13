@@ -1,21 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lballiot <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/07 10:53:18 by lballiot          #+#    #+#             */
-/*   Updated: 2017/11/13 14:37:54 by lballiot         ###   ########.fr       */
+/*   Created: 2017/11/13 17:17:29 by lballiot          #+#    #+#             */
+/*   Updated: 2017/11/13 18:04:20 by lballiot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(const char *str)
+int		ft_strncmp(const char *s1, const char *s2, unsigned int n)
 {
-	unsigned long i;
+	int i;
 
 	i = 0;
-	while (str[i])
-		i++;
-	return (i);
+	while (n > 1 && s1[i] != '\0' && s2[i] != '\0')
+	{
+		if (s1[i] == s2[i])
+		{
+			i++;
+			n--;
+		}
+		else
+			return (s1[i] - s2[i]);
+	}
+	return (s1[i] - s2[i]);
 }

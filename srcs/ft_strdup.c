@@ -6,11 +6,11 @@
 /*   By: lballiot <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 12:57:42 by lballiot          #+#    #+#             */
-/*   Updated: 2017/11/13 10:56:18 by lballiot         ###   ########.fr       */
+/*   Updated: 2017/11/13 14:08:50 by lballiot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./libft.h"
+#include "../includes/libft.h"
 
 char	*ft_strdup(const char *src)
 {

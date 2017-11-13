@@ -1,21 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   mainstrdup.c                                       :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lballiot <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/13 10:31:00 by lballiot          #+#    #+#             */
-/*   Updated: 2017/11/13 10:57:04 by lballiot         ###   ########.fr       */
+/*   Created: 2017/11/07 10:59:49 by lballiot          #+#    #+#             */
+/*   Updated: 2017/11/13 17:17:10 by lballiot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
-
-int		main(int ac, char **av)
+int		ft_strcmp(const char *s1, const char *s2)
 {
-	(void)ac;
-	printf("fct : %s\n", ft_strdup(av[1]));
-	printf("real : %s\n", strdup(av[1]));
-	return (0);
+	while (*s1 != '\0' && *s2 != '\0' && *s1 == *s2)
+	{
+		s1++;
+		s2++;
+	}
+	if (*s1 == '\0' && *s2 != '\0')
+		return (-*s2);
+	return (*s1 - *s2);
 }

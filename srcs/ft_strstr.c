@@ -1,21 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lballiot <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/07 10:53:18 by lballiot          #+#    #+#             */
-/*   Updated: 2017/11/13 14:37:54 by lballiot         ###   ########.fr       */
+/*   Created: 2017/11/13 18:16:19 by lballiot          #+#    #+#             */
+/*   Updated: 2017/11/13 18:53:44 by lballiot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(const char *str)
+char *ft_strstr(const char *str, const char *to_find)
 {
-	unsigned long i;
+	int i;
+	int j;
+	int k;
 
 	i = 0;
-	while (str[i])
-		i++;
-	return (i);
+	j = i;
+
+	if (to_find[i] == '\0')
+		return (str);
+	while (str[i]  && to_find[j])
+	{
+		if (str[i] != to_find[j])
+			i++;
+		if(str[i] == to_find[j])
+			k = i;
+		while (str[i] == to_find[j] && str[i] != '\0' && to_find[j] != '\0')
+		{
+			i++;
+			j++;
+		}
+		if (to_find[j] == '\0')
+			return (&str[k]);
+	}
+	return (0);
+	
+	
+	
+	return (0);
 }
