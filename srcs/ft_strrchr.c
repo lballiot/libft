@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lballiot <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/14 10:30:47 by lballiot          #+#    #+#             */
-/*   Updated: 2017/11/14 15:28:49 by lballiot         ###   ########.fr       */
+/*   Created: 2017/11/14 13:26:10 by lballiot          #+#    #+#             */
+/*   Updated: 2017/11/14 15:29:13 by lballiot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcpy(char *dest, const char *src)
+char	*ft_strrchr(char *str, int c)
 {
+	int occ;
 	int i;
 
 	i = 0;
-	while (src[i])
+	while (str[i])
 	{
-		dest[i] = src[i];
-		i++;
+		if (str[i] == atoi(c))
+			occ = i;
 	}
-	dest[i] = '\0';
-	return (dest);
+	return (&str[occ]);
 }

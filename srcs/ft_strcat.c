@@ -1,25 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lballiot <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/14 10:30:47 by lballiot          #+#    #+#             */
-/*   Updated: 2017/11/14 15:28:49 by lballiot         ###   ########.fr       */
+/*   Created: 2017/11/14 14:37:16 by lballiot          #+#    #+#             */
+/*   Updated: 2017/11/14 15:15:33 by lballiot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcpy(char *dest, const char *src)
+char	*ft_strcat(char *dest, const char *src)
 {
 	int i;
+	int j;
 
 	i = 0;
-	while (src[i])
+	j = 0;
+	while (dest[j])
+		j++;
+	while (src[i] != '\0')
 	{
-		dest[i] = src[i];
+		dest[j] = src[i];
+		j++;
 		i++;
 	}
-	dest[i] = '\0';
+	dest[j] = '\0';
 	return (dest);
 }
