@@ -6,7 +6,7 @@
 /*   By: lballiot <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 10:55:33 by lballiot          #+#    #+#             */
-/*   Updated: 2017/11/14 15:25:20 by lballiot         ###   ########.fr       */
+/*   Updated: 2017/11/14 15:38:02 by lballiot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,9 @@ char	*ft_strcat(char *dest, const char *src);
 
 void	ft_strclr(char *s);
 
+void	ft_putchar(char c);
+
+void ft_putstr(char const *s);
 
 
 

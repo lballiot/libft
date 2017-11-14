@@ -6,7 +6,7 @@
 /*   By: lballiot <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 10:06:08 by lballiot          #+#    #+#             */
-/*   Updated: 2017/11/14 15:24:15 by lballiot         ###   ########.fr       */
+/*   Updated: 2017/11/14 16:08:46 by lballiot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,12 +80,14 @@ int		main(int ac, char **av)
 //	printf("fct : %s\n", ft_strcat(av[1], av[2]));
 //	printf("real : %s\n", strcat(av[1], av[2]));
 	
-	printf("\nFT_STRCLR\n");
-	ft_strclr(av[1]);
+//	printf("\nFT_STRCLR\n");
+//	ft_strclr(av[1]);
 	
+	printf("\nFT_PUTCHAR\n");
+	ft_putchar('f');
 	
-	
-	
+	printf("\nFT_PUTSTR\n");
+	ft_putstr(av[1]);
 	
 	
 	
