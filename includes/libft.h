@@ -6,7 +6,7 @@
 /*   By: lballiot <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 10:55:33 by lballiot          #+#    #+#             */
-/*   Updated: 2017/11/13 18:25:02 by lballiot         ###   ########.fr       */
+/*   Updated: 2017/11/14 11:16:06 by lballiot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 #include <stdlib.h>
 #include <ctype.h>
 
-int		ft_strlen(const char *str);
+unsigned long	ft_strlen(const char *str);
 
 char	*ft_strdup(const char *src);
 
@@ -41,8 +41,10 @@ int		ft_strcmp(const char *s1, const char *s2);
 
 int		ft_strncmp(const char *s1, const char *s2, unsigned int n);
 
-char *ft_strstr(const char *src, const char *str);
+char	*ft_strstr(char *src, char *str);
 
+char	*ft_strnstr(char *str, char *to_find, int n);
 
+char	*ft_strcpy(char *dest, const char *src);
 
 #endif

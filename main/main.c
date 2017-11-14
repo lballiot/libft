@@ -6,7 +6,7 @@
 /*   By: lballiot <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 10:06:08 by lballiot          #+#    #+#             */
-/*   Updated: 2017/11/13 18:42:09 by lballiot         ###   ########.fr       */
+/*   Updated: 2017/11/14 11:18:30 by lballiot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int		main(int ac, char **av)
 {
 	(void)ac;
 	printf("STRLEN\n");
-	printf("fct : %u\n", ft_strlen(av[1]));
+	printf("fct : %lu\n", ft_strlen(av[1]));
 	printf("real : %lu\n", strlen(av[1]));
 
 	printf("\nSTRDUP\n");
@@ -63,7 +63,13 @@ int		main(int ac, char **av)
 	printf("fct : %s\n", ft_strstr(av[1], av[2]));
 	printf("real : %s\n", strstr(av[1], av[2]));
 
+//	printf("\nSTRCPY\n");
+//	printf("fct : %s\n", ft_strcpy(av[1], av[2]));
+//	printf("real : %s\n", strcpy(av[1], av[2]));
 
+	printf("\nSTRNSTR\n");
+	printf("fct : %s\n", ft_strnstr(av[1], av[2], atoi(av[3])));
+	printf("real : %s\n", strnstr(av[1], av[2], atoi(av[3])));
 
 
 
