@@ -1,35 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strstr.c                                        :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lballiot <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/13 18:16:19 by lballiot          #+#    #+#             */
-/*   Updated: 2017/11/14 11:08:35 by lballiot         ###   ########.fr       */
+/*   Created: 2017/11/14 10:27:55 by lballiot          #+#    #+#             */
+/*   Updated: 2017/11/14 10:30:41 by lballiot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strstr(char *str, char *to_find)
+void	*ft_memset(void *s, int c, unsigned int n)
 {
-	int i;
-	int j;
-	int k;
+	
 
-	i = 0;
-	j = i;
-	if (to_find[i] == '\0')
-		return (str);
-	while (str[i] && to_find[j])
-	{
-		if (str[i] != to_find[j])
-			i++;
-		if (str[i] == to_find[j])
-			k = i;
-		while (str[i] == to_find[j] && str[i++] != '\0' && to_find[j++] != '\0')
-			if (to_find[j] == '\0')
-				return (&str[k]);
-		j = 0;
-	}
-	return (0);
+	return ();
 }
