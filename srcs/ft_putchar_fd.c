@@ -1,19 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lballiot <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/07 10:48:18 by lballiot          #+#    #+#             */
-/*   Updated: 2017/11/15 08:43:14 by lballiot         ###   ########.fr       */
+/*   Created: 2017/11/15 09:05:11 by lballiot          #+#    #+#             */
+/*   Updated: 2017/11/15 09:14:18 by lballiot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar(char c);
+#include <unistd.h>
 
-void	ft_putstr(char const *s)
+void	ft_putchar_fd(char c, int fd)
 {
-	while (*s)
-		ft_putchar(*s++);
+	write(fd, &c, 1);
 }

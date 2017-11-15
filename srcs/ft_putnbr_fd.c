@@ -1,19 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lballiot <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/07 10:48:18 by lballiot          #+#    #+#             */
-/*   Updated: 2017/11/15 08:43:14 by lballiot         ###   ########.fr       */
+/*   Created: 2017/11/15 10:33:22 by lballiot          #+#    #+#             */
+/*   Updated: 2017/11/15 10:37:33 by lballiot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar(char c);
+void	ft_putchar_fd(char c, int fd);
 
-void	ft_putstr(char const *s)
+void	ft_putnbr_fd(int n, int fd)
 {
-	while (*s)
-		ft_putchar(*s++);
+	char	tmp[12];
+	int		i;
+
+	i = 0;
+	if (n < 0)
+	{
+		ft_putchar_fd('-', fd);
+		if (n == -2147483648)
+		{
+			ft_putchar_fd('2', fd);
+			n = -147483648;
+		}
+		n = -n;
+	}
+	while (n > 9)
+	{
+		tmp[i++] = (n % 10) + 48;
+		n = n / 10;
+	}
+	if (n < 10)
+		tmp[i] = n + 48;
+	while (i >= 0)
+		ft_putchar_fd(tmp[i--], fd);
 }

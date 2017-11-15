@@ -6,7 +6,7 @@
 /*   By: lballiot <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 10:06:08 by lballiot          #+#    #+#             */
-/*   Updated: 2017/11/14 16:08:46 by lballiot         ###   ########.fr       */
+/*   Updated: 2017/11/15 11:06:06 by lballiot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,10 @@ int		main(int ac, char **av)
 //	printf("fct : %s\n", ft_strcpy(av[1], av[2]));
 //	printf("real : %s\n", strcpy(av[1], av[2]));
 
+//	printf("\nSTRNCPY\n");
+//	printf("fct : %s\n", ft_strncpy(av[1], av[2], atoi(av[3])));
+//	printf("real : %s\n", strncpy(av[1], av[2], atoi(av[3])));
+
 //	printf("\nSTRNSTR\n");
 //	printf("fct : %s\n", ft_strnstr(av[1], av[2], atoi(av[3])));
 //	printf("real : %s\n", strnstr(av[1], av[2], atoi(av[3])));
@@ -83,18 +87,32 @@ int		main(int ac, char **av)
 //	printf("\nFT_STRCLR\n");
 //	ft_strclr(av[1]);
 	
-	printf("\nFT_PUTCHAR\n");
-	ft_putchar('f');
+//	printf("\nFT_PUTCHAR\n");
+//	ft_putchar('f');
 	
-	printf("\nFT_PUTSTR\n");
-	ft_putstr(av[1]);
+//	printf("\nFT_PUTSTR\n");
+//	ft_putstr(av[1]);
 	
+//	printf("\nFT_PUTCHAR_FD\n");
+//	ft_putchar_fd('d', 1);
 	
+//	printf("\nFT_PUTSTR_FD\n");
+//	ft_putstr_fd(av[1], 1);
 	
+//	printf("\nFT_PUTENDL\n");
+//	ft_putendl(av[1]);
 	
+//	printf("\nFT_PUTENDL_FD\n");
+//	ft_putendl_fd(av[1], 1);
 	
+//	printf("\nFT_PUTNBR\n");
+//	ft_putnbr(atoi(av[1]));
 	
+//	printf("\nFT_PUTNBR_FD\n");
+//	ft_putnbr_fd(atoi(av[1]), atoi(av[2]));
 	
+	printf("\nFT_STREQU\n");
+	printf("%d", ft_strequ(av[1], av[2]));
 	
 	
 	

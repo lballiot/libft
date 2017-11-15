@@ -6,7 +6,7 @@
 /*   By: lballiot <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 10:55:33 by lballiot          #+#    #+#             */
-/*   Updated: 2017/11/14 15:38:02 by lballiot         ###   ########.fr       */
+/*   Updated: 2017/11/15 11:03:49 by lballiot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,31 @@ void	ft_strclr(char *s);
 void	ft_putchar(char c);
 
 void ft_putstr(char const *s);
+
+void	ft_putchar_fd(char c, int fd);
+
+void	ft_putstr_fd(char const *s, int fd);
+
+void	ft_putendl(char const *s);
+
+void	ft_putendl_fd(char const *s, int fd);
+
+void	ft_putnbr(int n);
+
+void	ft_putnbr_fd(int n, int fd);
+
+char	*ft_strncpy(char *dest, const char *src, unsigned int n);
+
+int		ft_strequ(char const *s1, char const *s2);
+
+
+
+
+
+
+
+
+
 
 
 
