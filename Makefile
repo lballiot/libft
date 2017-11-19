@@ -38,7 +38,9 @@ SRC = ./srcs/ft_strlen.c \
 	  ./srcs/ft_putnbr.c \
 	  ./srcs/ft_putnbr_fd.c \
 	  ./srcs/ft_strncpy.c \
-	  ./srcs/ft_strequ.c
+	  ./srcs/ft_strequ.c \
+	  ./srcs/ft_strnequ.c \
+	  ./srcs/ft_strncat.c
 
 
 OBJ = $(SRC:.c=.o)

@@ -73,9 +73,9 @@ char	*ft_strncpy(char *dest, const char *src, unsigned int n);
 
 int		ft_strequ(char const *s1, char const *s2);
 
+int		ft_strnequ(char const *s1, char const *s2, unsigned int n);
 
-
-
+char	*ft_strncat(char *dest, const char *src, unsigned int n);
 
 
 
