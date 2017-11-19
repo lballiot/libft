@@ -20,11 +20,7 @@ char	*ft_strcat(char *dest, const char *src)
 	while (dest[j])
 		j++;
 	while (src[i] != '\0')
-	{
-		dest[j] = src[i];
-		j++;
-		i++;
-	}
+		dest[j++] = src[i++];
 	dest[j] = '\0';
 	return (dest);
 }

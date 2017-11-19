@@ -17,8 +17,6 @@ char	*ft_strncpy(char *dest, const char *src, unsigned int n)
 	int i;
 
 	i = 0;
-//	if (dest)
-//		return (NULL);
 	while (src[i] && n > 0)
 	{
 		dest[i] = src[i];
