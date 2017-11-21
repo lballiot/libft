@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strnequ.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lballiot <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/11/21 10:12:26 by lballiot          #+#    #+#             */
+/*   Updated: 2017/11/21 10:12:48 by lballiot         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 int		ft_strnequ(char const *s1, char const *s2, unsigned int n)
 {
 	int i;
@@ -7,7 +19,7 @@ int		ft_strnequ(char const *s1, char const *s2, unsigned int n)
 		return (1);
 	while (s1[i] == s2[i] && s1[i] != '\0' && s2[i] != '\0' && n > 0)
 	{
-		if(n == 1 && s1[i] == s2[i])
+		if (n == 1 && s1[i] == s2[i])
 			return (1);
 		i++;
 		n--;

@@ -1,27 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strequ.c                                        :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lballiot <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/15 11:00:59 by lballiot          #+#    #+#             */
-/*   Updated: 2017/11/21 10:02:33 by lballiot         ###   ########.fr       */
+/*   Created: 2017/11/21 10:38:28 by lballiot          #+#    #+#             */
+/*   Updated: 2017/11/21 10:42:26 by lballiot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strequ(char const *s1, char const *s2)
+int	ft_strlcat(char * restrict dst, const char * src, unsigned int dstsize)
 {
-	int i;
 
-	i = 0;
-	if (s1[i] == '\0' && s2[i] == '\0')
-		return (1);
-	while (s1[i] == s2[i] && s1[i] != '\0' && s2[i] != '\0')
-	{
-		i++;
-		if (s1[i] == '\0' && s2[i] == '\0')
-			return (1);
-	}
-	return (0);
 }

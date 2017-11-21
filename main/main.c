@@ -6,7 +6,7 @@
 /*   By: lballiot <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 10:06:08 by lballiot          #+#    #+#             */
-/*   Updated: 2017/11/15 11:06:06 by lballiot         ###   ########.fr       */
+/*   Updated: 2017/11/21 12:03:56 by lballiot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -121,9 +121,27 @@ int		main(int ac, char **av)
 //	printf("\nFT_STRNEQU\n");
 //	printf("%d", ft_strnequ(av[1], av[2], atoi(av[3])));
 
-	printf("\nFT_STRLCAT\n");
-//	printf("%d", ft_strlcat(av[1], av[2], atoi(av[3])));
-	printf("%d", strlcat(av[1], av[2], atoi(av[3])));
+//	printf("\nFT_STRLCAT\n");
+//	printf("fct : %d", ft_strlcat(av[1], av[2], atoi(av[3])));
+//	printf("real : %lu", strlcat(av[1], av[2], atoi(av[3])));
+
+//	printf("\nFT_BZERO\n");
+//	ft_bzero(av[1], atoi(av[2]));
+
+//	printf("\nFT_MEMSET\n");
+//	ft_memset()
+	
+	printf("\nFT_STRCHR\n");
+//	printf("fct : %s\n", ft_strchr(av[1], atoi(av[2])));
+	printf("real : %s\n", strchr(av[1], 'y'));
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: lballiot <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 10:55:33 by lballiot          #+#    #+#             */
-/*   Updated: 2017/11/15 11:03:49 by lballiot         ###   ########.fr       */
+/*   Updated: 2017/11/21 11:57:30 by lballiot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ char	*ft_strnstr(char *str, char *to_find, int n);
 
 char	*ft_strcpy(char *dest, const char *src);
 
-char	*ft_strrchar(char *str, int c);
+//char	*ft_strrchar(char *str, int c);
 
 char	*ft_strcat(char *dest, const char *src);
 
@@ -77,9 +77,9 @@ int		ft_strnequ(char const *s1, char const *s2, unsigned int n);
 
 char	*ft_strncat(char *dest, const char *src, unsigned int n);
 
+//void	ft_bzero(void *s, unsigned int n);
 
-
-
+int		ft_atoi(const char *str);
 
 
 

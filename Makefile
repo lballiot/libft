@@ -6,7 +6,7 @@
 #    By: lballiot <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/13 10:48:12 by lballiot          #+#    #+#              #
-#    Updated: 2017/11/15 11:03:09 by lballiot         ###   ########.fr        #
+#    Updated: 2017/11/21 11:57:42 by lballiot         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,6 @@ SRC = ./srcs/ft_strlen.c \
 	  ./srcs/ft_strstr.c \
 	  ./srcs/ft_strcpy.c \
 	  ./srcs/ft_strnstr.c \
-	  ./srcs/ft_strrchr.c \
 	  ./srcs/ft_strcat.c \
 	  ./srcs/ft_strclr.c \
 	  ./srcs/ft_putchar.c \
@@ -40,7 +39,9 @@ SRC = ./srcs/ft_strlen.c \
 	  ./srcs/ft_strncpy.c \
 	  ./srcs/ft_strequ.c \
 	  ./srcs/ft_strnequ.c \
-	  ./srcs/ft_strncat.c
+	  ./srcs/ft_strncat.c \
+	  ./srcs/ft_atoi.c \
+
 
 
 OBJ = $(SRC:.c=.o)

@@ -1,25 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lballiot <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/14 13:26:10 by lballiot          #+#    #+#             */
-/*   Updated: 2017/11/14 15:29:13 by lballiot         ###   ########.fr       */
+/*   Created: 2017/11/21 10:42:37 by lballiot          #+#    #+#             */
+/*   Updated: 2017/11/21 10:49:55 by lballiot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strrchr(char *str, int c)
+void	bzero(void *s, unsigned long n)
 {
-	int occ;
-	int i;
-
-	i = 0;
-	while (str[i])
+	while (n > 0)
 	{
-		if (str[i] == atoi(c))
-			occ = i;
+		*s = '\0';
+		n--;
 	}
-	return (&str[occ]);
 }

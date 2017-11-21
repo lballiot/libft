@@ -1,27 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strequ.c                                        :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lballiot <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/15 11:00:59 by lballiot          #+#    #+#             */
-/*   Updated: 2017/11/21 10:02:33 by lballiot         ###   ########.fr       */
+/*   Created: 2017/11/21 10:51:12 by lballiot          #+#    #+#             */
+/*   Updated: 2017/11/21 11:03:23 by lballiot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strequ(char const *s1, char const *s2)
-{
-	int i;
+#include <stdio.h>
 
-	i = 0;
-	if (s1[i] == '\0' && s2[i] == '\0')
-		return (1);
-	while (s1[i] == s2[i] && s1[i] != '\0' && s2[i] != '\0')
+char *ft_strcpy(char *dest, char *src);
+
+void	*ft_memset(void *s, int c, unsigned int n)
+{
+	printf("avant memset : %s\n", s);
+	while (n > 0)
 	{
-		i++;
-		if (s1[i] == '\0' && s2[i] == '\0')
-			return (1);
+		ft_strcpy();
 	}
-	return (0);
+printf("apres memset : %s\n", s);
+
 }

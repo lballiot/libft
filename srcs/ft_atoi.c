@@ -1,27 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strequ.c                                        :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lballiot <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/15 11:00:59 by lballiot          #+#    #+#             */
-/*   Updated: 2017/11/21 10:02:33 by lballiot         ###   ########.fr       */
+/*   Created: 2017/11/21 11:04:38 by lballiot          #+#    #+#             */
+/*   Updated: 2017/11/21 11:56:41 by lballiot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strequ(char const *s1, char const *s2)
+int		ft_atoi(const char *str)
 {
 	int i;
+	int isneg;
+	int nb;
 
 	i = 0;
-	if (s1[i] == '\0' && s2[i] == '\0')
-		return (1);
-	while (s1[i] == s2[i] && s1[i] != '\0' && s2[i] != '\0')
-	{
+	nb = 0;
+	while (((str[i] >= 8) && str[i] <= 13) || str[i] == ' ')
 		i++;
-		if (s1[i] == '\0' && s2[i] == '\0')
-			return (1);
+	if (str[i] == '-')
+		isneg = 1;
+	if ((str[i] == '+') || str[i] == '-')
+		i++;
+	while ((str[i] >= '0' && str[i] <= '9') && str[i])
+	{
+		nb = nb * 10 + (str[i] - '0');
+		i++;
 	}
-	return (0);
+	if (isneg == 1)
+		return (-nb);
+	else
+		return (nb);
 }
