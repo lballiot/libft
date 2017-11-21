@@ -41,6 +41,8 @@ SRC = ./srcs/ft_strlen.c \
 	  ./srcs/ft_strnequ.c \
 	  ./srcs/ft_strncat.c \
 	  ./srcs/ft_atoi.c \
+	  ./srcs/ft_strchr.c \
+	  ./srcs/ft_strrchr.c
 
 
 

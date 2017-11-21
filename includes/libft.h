@@ -81,8 +81,9 @@ char	*ft_strncat(char *dest, const char *src, unsigned int n);
 
 int		ft_atoi(const char *str);
 
+char	*ft_strchr(const char *s, int c);
 
-
+char	*ft_strrchr(const char *s, int c);
 
 
 

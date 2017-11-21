@@ -131,11 +131,14 @@ int		main(int ac, char **av)
 //	printf("\nFT_MEMSET\n");
 //	ft_memset()
 	
-	printf("\nFT_STRCHR\n");
-//	printf("fct : %s\n", ft_strchr(av[1], atoi(av[2])));
-	printf("real : %s\n", strchr(av[1], 'y'));
+//	printf("\nFT_STRCHR\n");
+//	printf("fct : %s\n", ft_strchr(av[1], 'y'));
+//	printf("real : %s\n", strchr(av[1], 'y'));
 	
-	
+	printf("\nFT_STRRCHR\n");
+//	printf("fct : %s\n", ft_strrchr(av[1], 'y'));
+//	printf("real : %s\n", strrchr(av[1], 'y');
+
 	
 	
 	
