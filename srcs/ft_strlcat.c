@@ -1,34 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lballiot <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/21 10:51:12 by lballiot          #+#    #+#             */
-/*   Updated: 2017/11/21 11:03:23 by lballiot         ###   ########.fr       */
+/*   Created: 2017/11/21 10:38:28 by lballiot          #+#    #+#             */
+/*   Updated: 2017/11/21 10:42:26 by lballiot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
-
-char	*ft_strcpy(char *dest, const char *src);
-
-void	*ft_memset(void *s, int c, unsigned int n)
+int	ft_strlcat(char * restrict dst, const char * src, unsigned int dstsize)
 {
-	int i;
 
-	i = 0;
-	printf("avant memset : %p\n", s);
-	while (n > 0)
-	{
-		s[i++] = c;
-		n--;
-
-
-
-//		ft_strcpy((char)c, (char)s[n]);
-	}
-printf("apres memset : %p\n", s);
-	return (s);
 }

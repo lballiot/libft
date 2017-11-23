@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strnequ(char const *s1, char const *s2, unsigned int n)
+int		ft_strnequ(char const *s1, char const *s2, size_t n)
 {
 	int i;
 
