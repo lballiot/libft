@@ -5,22 +5,26 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: lballiot <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/21 10:51:12 by lballiot          #+#    #+#             */
-/*   Updated: 2017/11/21 11:03:23 by lballiot         ###   ########.fr       */
+/*   Created: 2017/11/23 10:01:49 by lballiot          #+#    #+#             */
+/*   Updated: 2017/11/23 10:23:01 by lballiot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "../includes/libft.h"
 
-char *ft_strcpy(char *dest, char *src);
-
-void	*ft_memset(void *s, int c, unsigned int n)
+void	*ft_memset(void *s, int c, size_t n)
 {
-	printf("avant memset : %s\n", s);
-	while (n > 0)
-	{
-		ft_strcpy();
-	}
-printf("apres memset : %s\n", s);
+	int				i;
+	unsigned char	*str;
 
+	str = (unsigned char *)s;
+	i = 0;
+	if (n == 0)
+		return (s);
+	while (n != 0)
+	{
+		str[i++] = (unsigned char)c;
+		n--;
+	}
+	return (s);
 }

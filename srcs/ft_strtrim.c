@@ -1,18 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lballiot <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/21 10:42:37 by lballiot          #+#    #+#             */
-/*   Updated: 2017/11/23 10:35:02 by lballiot         ###   ########.fr       */
+/*   Created: 2017/11/23 11:32:35 by lballiot          #+#    #+#             */
+/*   Updated: 2017/11/23 12:21:43 by lballiot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-void	bzero(void *s, size_t n)
+char	*ft_strtrim(char const *s)
 {
-	ft_memset(s, '\0', n);
+	char	*str;
+	int		size;
+	int		i;
+
+	size = 0;
+	i = 0;
+	while (s[i])
+	{
+		if (s[i] != ' ' && s[i] != '\n' && s[i] != '\t')
+			size++;
+		i++;
+	}
+	if (!(str = (char *)malloc(sizeof(char *) * size + 1)))
+		return (NULL);
+	i = 0;
+	size = 0;
+	while (s[size])
+	{
+		if (s[size] != ' ' && s[size] != '\n' && s[size] != '\t')
+			str[i++] = s[size];
+		size++;
+	}
+	return (str);
 }

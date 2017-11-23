@@ -6,7 +6,7 @@
 #    By: lballiot <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/13 10:48:12 by lballiot          #+#    #+#              #
-#    Updated: 2017/11/21 11:57:42 by lballiot         ###   ########.fr        #
+#    Updated: 2017/11/23 16:02:32 by lballiot         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,8 +41,18 @@ SRC = ./srcs/ft_strlen.c \
 	  ./srcs/ft_strnequ.c \
 	  ./srcs/ft_strncat.c \
 	  ./srcs/ft_atoi.c \
-	  ./srcs/ft_strchr.c \
-	  ./srcs/ft_strrchr.c
+	  ./srcs/ft_memset.c \
+	  ./srcs/ft_bzero.c \
+	  ./srcs/ft_strsub.c \
+	  ./srcs/ft_strjoin.c \
+	  ./srcs/ft_strtrim.c \
+	  ./srcs/ft_memalloc.c \
+	  ./srcs/ft_strdel.c \
+	  ./srcs/ft_memdel.c \
+	  ./srcs/ft_memchr.c \
+	  ./srcs/ft_memcmp.c \
+	  ./srcs/ft_memmove.c \
+	  ./srcs/ft_memcpy.c
 
 
 
