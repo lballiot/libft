@@ -22,7 +22,6 @@
 /*
  * PART 1
  */
-
 typedef struct s_list
 {
 	
@@ -94,6 +93,7 @@ int		ft_tolower(int c);
  * PART 2
  */
 
+
 void	*ft_memalloc(size_t size);
 
 void	ft_memdel(void **ap);
@@ -101,6 +101,8 @@ void	ft_memdel(void **ap);
 char	*ft_strnew(size_t size);
 
 void	ft_strdel(char **as);
+
+char	*ft_strnew(size_t size);
 
 void	ft_strclr(char *s);
 
@@ -115,6 +117,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 int		ft_strequ(char const *s1, char const *s2);
 
 int		ft_strnequ(char const *s1, char const *s2, size_t n);
+
 
 char	*ft_strsub(char const *s, unsigned int start, size_t len);
 
