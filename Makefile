@@ -52,8 +52,18 @@ SRC = ./srcs/ft_strlen.c \
 	  ./srcs/ft_memchr.c \
 	  ./srcs/ft_memcmp.c \
 	  ./srcs/ft_memmove.c \
+	  ./srcs/ft_strmap.c \
+	  ./srcs/ft_strmapi.c \
+	  ./srcs/ft_striter.c \
+	  ./srcs/ft_striteri.c \
+	  ./srcs/ft_strnew.c \
+	  ./srcs/ft_strsplit.c \
+	  ./srcs/ft_itoa.c \
+	  ./srcs/ft_strlcat.c \
+	  ./srcs/ft_strchr.c \
+	  ./srcs/ft_strrchr.c \
 	  ./srcs/ft_memcpy.c
-
+	
 
 
 OBJ = $(SRC:.c=.o)
