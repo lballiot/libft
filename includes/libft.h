@@ -6,13 +6,14 @@
 /*   By: lballiot <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 10:55:33 by lballiot          #+#    #+#             */
-/*   Updated: 2017/11/21 11:57:30 by lballiot         ###   ########.fr       */
+/*   Updated: 2017/11/24 11:42:36 by lballiot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
+#include <assert.h>
 #include <unistd.h>
 #include <stdio.h>
 #include <string.h>
@@ -22,16 +23,6 @@
 /*
  * PART 1
  */
-typedef struct s_list
-{
-	
-	void *content;
-	
-	size_t content_size;
-	
-	struct s_list*next;
-	
-}	t_list;
 
 void	*ft_memset(void *s, int c, size_t n);
 
@@ -57,7 +48,7 @@ char	*ft_strcat(char *dest, const char *src);
 
 char	*ft_strncat(char *dest, const char *src, unsigned int n);
 
-size_t	ft_strlcat(char *dest, const char *src, size_t size);
+size_t	ft_strlcat(char * restrict dst, const char * restrict src, size_t size);
 
 char	*ft_strchr(const char *s, int c);
 
@@ -93,7 +84,6 @@ int		ft_tolower(int c);
  * PART 2
  */
 
-
 void	*ft_memalloc(size_t size);
 
 void	ft_memdel(void **ap);
@@ -101,8 +91,6 @@ void	ft_memdel(void **ap);
 char	*ft_strnew(size_t size);
 
 void	ft_strdel(char **as);
-
-char	*ft_strnew(size_t size);
 
 void	ft_strclr(char *s);
 
@@ -117,7 +105,6 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 int		ft_strequ(char const *s1, char const *s2);
 
 int		ft_strnequ(char const *s1, char const *s2, size_t n);
-
 
 char	*ft_strsub(char const *s, unsigned int start, size_t len);
 
