@@ -6,7 +6,7 @@
 /*   By: lballiot <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 14:37:16 by lballiot          #+#    #+#             */
-/*   Updated: 2017/11/21 10:01:43 by lballiot         ###   ########.fr       */
+/*   Updated: 2017/11/27 10:48:11 by lballiot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,10 @@ char	*ft_strcat(char *dest, const char *src)
 
 	i = 0;
 	j = 0;
-	while (dest[j])
-		j++;
-	while (src[i] != '\0')
-		dest[j++] = src[i++];
-	dest[j] = '\0';
+	while (dest[i] != '\0')
+		i++;
+	while (src[j] != '\0')
+		dest[i++] = src[j++];
+	dest[i] = '\0';
 	return (dest);
 }
