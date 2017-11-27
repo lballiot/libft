@@ -229,20 +229,15 @@ int		main(int ac, char **av)
 	assert(ft_strequ("", "") == 1);
 	assert(ft_strequ("abcDEF", "abcDEF") == 1);
 	assert(ft_strequ("abcDEF", "abcDEf") == 0);
-	assert(ft_strequ("testtototititata", "toto") == 0); */
+	assert(ft_strequ("testtototititata", "toto") == 0);
 
 
 	printf("\nFT_STRNEQU\n");
-	printf("1 %d\n", ft_strnequ("ededeqdf", "", 0));
-//	assert(ft_strnequ("ededeqdf", "", 0) == 1);
-	printf("1 %d\n", ft_strnequ("abcde", "abdfe", 2));
-//	assert(ft_strnequ("abcde", "abdfe", 2) == 1);
-	printf("1 %d\n", ft_strnequ("abc", "abc", 100));
-//	assert(ft_strnequ("abc", "abc", 100) == 1);
-	printf("0 %d\n", ft_strnequ("abc", "abc", 100));
-//	assert(ft_strnequ("abcde", "abdde", 5) == 0);
+	assert(ft_strnequ("ededeqdf", "", 0) == 1);
+	assert(ft_strnequ("abcde", "abdfe", 2) == 1);
+	assert(ft_strnequ("abc", "abc", 100) == 1);
+	assert(ft_strnequ("abcde", "abdde", 5) == 0);
 
-/*
 	//		printf("\nFT_STRLCAT\n");
 	//		printf("fct  : %d", ft_strlcat(av[1], av[2], atoi(av[3])));
 	//		printf("real : %lu", strlcat(av[1], av[2], atoi(av[3])));
@@ -253,23 +248,44 @@ int		main(int ac, char **av)
 	printf("\nFT_MEMSET\n");
 	printf("fct  : %s\n", ft_memset(av[1], 't', 3));
 	printf("real : %s\n", memset(av[2], 't', 3));
+	char b1[100], b2[100];
+	ft_memset(b1, 42, 100);
+	memset(b2, 42, 100);
+	assert(memset(b1, 99, 0) == ft_memset(b1, 99, 0));
+	assert(memcmp(b1, b2, 100) == 0);
+	b1[0] = 1;
+	ft_memset(b1, 0, 0);
+	assert(b1[0] == 1);
+	assert(memcmp(memset(strdup("abcd"), 'A', 5), ft_memset(strdup("abcd"), 'A', 5), 5) == 0);
+	assert(memcmp(memset(strdup("abcd"), 0, 0), ft_memset(strdup("abcd"), 0, 0), 5) == 0);
 
 	printf("\nFT_STRCHR\n");
-	printf("fct  : %s\n", ft_strchr(av[1], atoi(av[2])));
-	printf("real : %s\n", strchr(av[1], 'y'));
+	static char buf[] = "Je suis un poisson.";
+	assert(strchr(buf, 'p') == ft_strchr(buf, 'p'));
+	assert(strchr(buf, '0') == ft_strchr(buf, '0'));
+	assert(ft_strchr(buf, 'J') == buf);
+	assert(ft_strchr(buf, 'z') == 0);
 
 	printf("\nFT_STRSUB\n");
-	printf("fct  : %s\n", ft_strsub(av[1], 2, 6));
+	static char *str = "Un jour je serai, le meilleur dresseur !";
+	assert(ft_strsub(str, 0, (size_t)-10) == NULL);
+	assert(strcmp(ft_strsub(str, 8, 8), "je serai") == 0);
+	assert(strcmp(ft_strsub(str, 0, 0), "") == 0);
 
 	printf("\nFT_STRJOIN\n");
 	printf("fct  : %s\n", ft_strjoin(av[1], av[2]));
+	assert(strcmp(ft_strjoin("abc", "def"), "abcdef") == 0);
+	assert(strcmp(ft_strjoin("", ""), "") == 0); */
 
 	printf("\nFT_STRTRIM\n");
+	printf("fct  :%s\n", ft_strtrim("\t toton\t\t  "));
 	printf("fct  :%s\n", ft_strtrim("\t\t\n\t\t  "));
 	printf("fct  :%s\n", ft_strtrim("\t\n  \tAAA \t BBB\t\n  \t"));
 	printf("fct  :%s\n", ft_strtrim(av[1]));
+//	assert(strcmp(ft_strtrim("abc"), "abc") == 0);
+//	assert(strcmp(ft_strtrim("\t\n  \tAAA \t BBB\t\n  \t"), "AAA \t BBB") == 0);
 
-	printf("\nFT_MEMALLOC\n");
+/*	printf("\nFT_MEMALLOC\n");
 	printf("fct  :%p\n", ft_memalloc(atoi(av[1])));
 
 	printf("\nFT_STRDEL\n");

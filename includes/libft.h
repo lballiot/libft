@@ -48,7 +48,7 @@ char	*ft_strcat(char *dest, const char *src);
 
 char	*ft_strncat(char *dest, const char *src, unsigned int n);
 
-size_t	ft_strlcat(char * restrict dst, const char * restrict src, size_t size);
+//size_t	ft_strlcat(char * restrict dst, const char * restrict src, size_t size);
 
 char	*ft_strchr(const char *s, int c);
 

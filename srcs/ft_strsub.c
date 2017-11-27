@@ -22,12 +22,7 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len)
 		return (NULL);
 	if (!(str = (char *)malloc(sizeof(char *) * (len + 1))))
 		return (NULL);
-	while (len != 0 && start != '\0')
-	{
-		str[i] = s[start];
-		len--;
-		i++;
-		start++;
-	}
+	while (len-- != 0 && start != '\0')
+		str[i++] = s[start++];
 	return (str);
 }
