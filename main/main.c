@@ -6,7 +6,7 @@
 /*   By: lballiot <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 10:06:08 by lballiot          #+#    #+#             */
-/*   Updated: 2017/11/27 11:38:51 by lballiot         ###   ########.fr       */
+/*   Updated: 2017/11/29 11:32:26 by lballiot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -275,7 +275,13 @@ int		main(int ac, char **av)
 	printf("\nFT_STRJOIN\n");
 	printf("fct  : %s\n", ft_strjoin(av[1], av[2]));
 	assert(strcmp(ft_strjoin("abc", "def"), "abcdef") == 0);
-	assert(strcmp(ft_strjoin("", ""), "") == 0); */
+	assert(strcmp(ft_strjoin("", ""), "") == 0);
+
+
+
+MODIFIER STRTRIM GIT
+
+
 
 	printf("\nFT_STRTRIM\n");
 	printf("fct  :%s\n", ft_strtrim("\t toton\t\t  "));
@@ -285,7 +291,7 @@ int		main(int ac, char **av)
 //	assert(strcmp(ft_strtrim("abc"), "abc") == 0);
 //	assert(strcmp(ft_strtrim("\t\n  \tAAA \t BBB\t\n  \t"), "AAA \t BBB") == 0);
 
-/*	printf("\nFT_MEMALLOC\n");
+	printf("\nFT_MEMALLOC\n");
 	printf("fct  :%p\n", ft_memalloc(atoi(av[1])));
 
 	printf("\nFT_STRDEL\n");
@@ -313,31 +319,57 @@ int		main(int ac, char **av)
 	assert(ft_memcmp("aab", "aac", 2) == 0);
 	assert(ft_memcmp("aww", "bpp", 0) == 0);
 	assert(ft_memcmp("\200", "\0", 1) > 0);
-	printf("fct  : %d\n", ft_memcmp(av[1], av[2], atoi(av[3])));
 	printf("real : %d\n", memcmp(av[1], av[2], atoi(av[3])));
 	printf("fct  : %d\n", ft_memcmp("aww", "bpp", 0));
 	printf("real : %d\n", memcmp("aww", "bpp", 0));
-	printf("fct  : %d\n", ft_memcmp("200", "00", 1));
-	printf("real : %d\n", memcmp("200", "00", 1));
-
+	printf("fct  : %d\n", ft_memcmp(av[1], av[2], atoi(av[3])));
+	printf("real : %d\n", memcmp(av[1], av[2], atoi(av[3])));
+*/
 	printf("\nFT_MEMMOVE\n");
 	printf("fct  : %s\n", ft_memmove(av[1], av[2], atoi(av[3])));
 	printf("real : %s\n", memmove(av[1], av[2], atoi(av[3])));
+	char dest[] = "tototitit";
+	const char src[]  = "lalalilil";
+
+	printf("Before memmove dest = %s, src = %s\n", dest, src);
+	ft_memmove(dest, src, 8);
+	printf("After memmove dest = %s, src = %s\n", dest, src);
+
 	char testA1[] = "abcdef";
 	char testA2[] = "abcdef";
-	printf("fct  : %s\n", ft_memmove(testA1 + 1, testA1, 5));
-	printf("real : %s\n", memmove(testA2 + 1, testA2, 5));
-	printf("fct  : %s\n", ft_memmove(testA1 + 1, testA1, 0));
-	printf("real : %s\n", memmove(testA2 + 1, testA2, 0));
+
 	ft_memmove(testA1 + 1, testA1, 5);
 	ft_memmove(testA1 + 1, testA1, 0);
-	assert(strcmp(testA1, testA2) == 0);
+	memmove(testA2 + 1, testA2, 5);
+	memmove(testA2 + 1, testA2, 0);
+	printf("%s\n", testA1);
 	assert(strcmp(testA1, "aabcde") == 0);
+	assert(strcmp(testA1, testA2) == 0);
+
+	char testB1[] = "abcdef";
+	char testB2[] = "abcdef";
+
+	ft_memmove(testB1, testB1 + 1, 5);
+	ft_memmove(testB1, testB1 + 1, 0);
+	memmove(testB2, testB2 + 1, 5);
+	memmove(testB2, testB2 + 1, 0);
+	assert(strcmp(testB1, "bcdeff") == 0);
+	assert(strcmp(testB1, testB2) == 0);
+
 
 	printf("\nFT_MEMCPY\n");
-	printf("fct  : %s\n", ft_memcpy(av[1], av[2], atoi(av[3])));
-	printf("real : %s\n", memcpy(av[4], av[5], atoi(av[3])));
-	*/
+	char test[] = "Je teste la fonction.";
+	char test2[] = "Je teste la fonction.";
+	printf("fct  : %s\n", ft_memcpy(test, "toto", atoi(av[1])));
+	printf("real : %s\n", memcpy(test2, "toto", atoi(av[1])));
+
+	char b1[100], b2[100];
+
+	memset(b1, 33, 100);
+	memset(b2, 63, 100);
+	ft_memcpy(b1, b2, 100);
+	assert(memcmp(b1, b2, 100) == 0);
+	assert(ft_memcpy(b1, b2, 0) == b1);
 
 
 
