@@ -15,77 +15,77 @@
 int		main(int ac, char **av)
 {
 	(void)ac;
-	/*		printf("STRLEN\n");
-			printf("fct  : %lu\n", ft_strlen(av[1]));
-			printf("real : %lu\n", strlen(av[1]));
+	printf("STRLEN\n");
+	printf("fct  : %lu\n", ft_strlen(av[1]));
+	printf("real : %lu\n", strlen(av[1]));
 
-			printf("\nSTRDUP\n");
-			printf("fct  : %s\n", ft_strdup(av[1]));
-			printf("real : %s\n", strdup(av[1]));
+	printf("\nSTRDUP\n");
+	printf("fct  : %s\n", ft_strdup(av[1]));
+	printf("real : %s\n", strdup(av[1]));
 
-			printf("\nISALPHA\n");
-			printf("fct  : %d\n", ft_isalpha(atoi(av[1])));
-			printf("real : %d\n", isalpha(atoi(av[1])));
+	printf("\nISALPHA\n");
+	printf("fct  : %d\n", ft_isalpha(atoi(av[1])));
+	printf("real : %d\n", isalpha(atoi(av[1])));
 
-			printf("\nISDIGIT\n");
-			printf("fct  : %d\n", ft_isdigit(atoi(av[1])));
-			printf("real : %d\n", isdigit(atoi(av[1])));
+	printf("\nISDIGIT\n");
+	printf("fct  : %d\n", ft_isdigit(atoi(av[1])));
+	printf("real : %d\n", isdigit(atoi(av[1])));
 
-			printf("\nISALNUM\n");
-			printf("fct  : %d\n", ft_isalnum(atoi(av[1])));
-			printf("real : %d\n", isalnum(atoi(av[1])));
+	printf("\nISALNUM\n");
+	printf("fct  : %d\n", ft_isalnum(atoi(av[1])));
+	printf("real : %d\n", isalnum(atoi(av[1])));
 
-			printf("\nISASCII\n");
-			printf("fct  : %d\n", ft_isascii(atoi(av[1])));
-			printf("real : %d\n", isascii(atoi(av[1])));
+	printf("\nISASCII\n");
+	printf("fct  : %d\n", ft_isascii(atoi(av[1])));
+	printf("real : %d\n", isascii(atoi(av[1])));
 
-			printf("\nISPRINT\n");
-			printf("fct  : %d\n", ft_isprint(atoi(av[1])));
-			printf("real : %d\n", isprint(atoi(av[1])));
+	printf("\nISPRINT\n");
+	printf("fct  : %d\n", ft_isprint(atoi(av[1])));
+	printf("real : %d\n", isprint(atoi(av[1])));
 
-			printf("\nTOUPPER\n");
-			printf("fct  : %d\n", ft_toupper(atoi(av[1])));
-			printf("real : %d\n", toupper(atoi(av[1])));
+	printf("\nTOUPPER\n");
+	printf("fct  : %d\n", ft_toupper(atoi(av[1])));
+	printf("real : %d\n", toupper(atoi(av[1])));
 
-			printf("\nTOLOWER\n");
-			printf("fct  : %d\n", ft_tolower(atoi(av[1])));
-			printf("real : %d\n", tolower(atoi(av[1])));
+	printf("\nTOLOWER\n");
+	printf("fct  : %d\n", ft_tolower(atoi(av[1])));
+	printf("real : %d\n", tolower(atoi(av[1])));
 
-			printf("\nSTRCMP\n");
-			printf("fct  : %d\n", ft_strcmp(av[1], av[2]));
-			printf("real : %d\n", strcmp(av[1], av[2]));
+	printf("\nSTRCMP\n");
+	printf("fct  : %d\n", ft_strcmp(av[1], av[2]));
+	printf("real : %d\n", strcmp(av[1], av[2]));
 
-			printf("\nSTRNCMP\n");
-			printf("fct  : %d\n", ft_strncmp(av[1], av[2], atoi(av[3])));
-			printf("real : %d\n", strncmp(av[1], av[2], atoi(av[3])));
+	printf("\nSTRNCMP\n");
+	printf("fct  : %d\n", ft_strncmp(av[1], av[2], atoi(av[3])));
+	printf("real : %d\n", strncmp(av[1], av[2], atoi(av[3])));
 
-			printf("\nSTRSTR\n");
-			static char buf[] = "Ceci n'est pas une pipe.";
-			static char buf2[] = "ozarabozaraboze";
-			printf("fct  : %s\n", ft_strstr(buf, "une"));
-			printf("real : %s\n", strstr(buf, "une"));
-			assert(ft_strstr(buf, "une") == strstr(buf, "une"));
-			printf("fct  : %s\n", ft_strstr(buf, "C"));
-			printf("real : %s\n", strstr(buf, "C"));
-			printf("fct  : %s\n", ft_strstr(buf, "."));
-			printf("real : %s\n", strstr(buf, "."));
-			printf("fct  : %s\n", ft_strstr(buf, "aaaaa"));
-			printf("real : %s\n", strstr(buf, "aaaaa"));
-			printf("fct  : %s\n", ft_strstr(buf2, "ozaraboze"));
-			printf("real : %s\n", strstr(buf2, "ozaraboze"));
-			printf("fct  : %s\n", ft_strstr(buf, "BWAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"));
-			printf("real : %s\n", strstr(buf, "BWAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"));
-			printf("fct  : %s\n", ft_strstr("", ""));
-			printf("real : %s\n", strstr("", ""));
-			printf("fct  : %s\n", ft_strstr(buf, "une"));
-			printf("real : %s\n", strstr(buf, "une"));
-			printf("fct  : %s\n", ft_strstr("J'ai fait pipapipapou en LV2", "pipapou"));
-			printf("real : %s\n", strstr("J'ai fait pipapipapou en LV2", "pipapou")); 
+	printf("\nSTRSTR\n");
+	static char buf[] = "Ceci n'est pas une pipe.";
+	static char buf2[] = "ozarabozaraboze";
+	printf("fct  : %s\n", ft_strstr(buf, "une"));
+	printf("real : %s\n", strstr(buf, "une"));
+	assert(ft_strstr(buf, "une") == strstr(buf, "une"));
+	printf("fct  : %s\n", ft_strstr(buf, "C"));
+	printf("real : %s\n", strstr(buf, "C"));
+	printf("fct  : %s\n", ft_strstr(buf, "."));
+	printf("real : %s\n", strstr(buf, "."));
+	printf("fct  : %s\n", ft_strstr(buf, "aaaaa"));
+	printf("real : %s\n", strstr(buf, "aaaaa"));
+	printf("fct  : %s\n", ft_strstr(buf2, "ozaraboze"));
+	printf("real : %s\n", strstr(buf2, "ozaraboze"));
+	printf("fct  : %s\n", ft_strstr(buf, "BWAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"));
+	printf("real : %s\n", strstr(buf, "BWAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"));
+	printf("fct  : %s\n", ft_strstr("", ""));
+	printf("real : %s\n", strstr("", ""));
+	printf("fct  : %s\n", ft_strstr(buf, "une"));
+	printf("real : %s\n", strstr(buf, "une"));
+	printf("fct  : %s\n", ft_strstr("J'ai fait pipapipapou en LV2", "pipapou"));
+	printf("real : %s\n", strstr("J'ai fait pipapipapou en LV2", "pipapou")); 
 
-			printf("\nSTRCPY\n");
-			char var[6], var2[6];
-			printf("fct  : %s\n", ft_strcpy(var, "abcde"));
-			printf("real : %s\n", strcpy(var2, "abcde"));
+	printf("\nSTRCPY\n");
+	char var[6], var2[6];
+	printf("fct  : %s\n", ft_strcpy(var, "abcde"));
+	printf("real : %s\n", strcpy(var2, "abcde"));
 	printf("fct  : %s\n", ft_strcpy(var, "abc"));
 	printf("real : %s\n", strcpy(var2, "abc"));
 	printf("fct  : %s\n", ft_strcpy(var, ""));
@@ -277,19 +277,13 @@ int		main(int ac, char **av)
 	assert(strcmp(ft_strjoin("abc", "def"), "abcdef") == 0);
 	assert(strcmp(ft_strjoin("", ""), "") == 0);
 
-
-
-MODIFIER STRTRIM GIT
-
-
-
 	printf("\nFT_STRTRIM\n");
 	printf("fct  :%s\n", ft_strtrim("\t toton\t\t  "));
 	printf("fct  :%s\n", ft_strtrim("\t\t\n\t\t  "));
 	printf("fct  :%s\n", ft_strtrim("\t\n  \tAAA \t BBB\t\n  \t"));
 	printf("fct  :%s\n", ft_strtrim(av[1]));
-//	assert(strcmp(ft_strtrim("abc"), "abc") == 0);
-//	assert(strcmp(ft_strtrim("\t\n  \tAAA \t BBB\t\n  \t"), "AAA \t BBB") == 0);
+	//	assert(strcmp(ft_strtrim("abc"), "abc") == 0);
+	//	assert(strcmp(ft_strtrim("\t\n  \tAAA \t BBB\t\n  \t"), "AAA \t BBB") == 0);
 
 	printf("\nFT_MEMALLOC\n");
 	printf("fct  :%p\n", ft_memalloc(atoi(av[1])));
@@ -324,10 +318,10 @@ MODIFIER STRTRIM GIT
 	printf("real : %d\n", memcmp("aww", "bpp", 0));
 	printf("fct  : %d\n", ft_memcmp(av[1], av[2], atoi(av[3])));
 	printf("real : %d\n", memcmp(av[1], av[2], atoi(av[3])));
-*/
+
 	printf("\nFT_MEMMOVE\n");
 	printf("fct  : %s\n", ft_memmove(av[1], av[2], atoi(av[3])));
-	printf("real : %s\n", memmove(av[1], av[2], atoi(av[3])));
+	printf("real : %s\n", memmove(av[4], av[5], atoi(av[3])));
 	char dest[] = "tototitit";
 	const char src[]  = "lalalilil";
 
@@ -340,9 +334,11 @@ MODIFIER STRTRIM GIT
 
 	ft_memmove(testA1 + 1, testA1, 5);
 	ft_memmove(testA1 + 1, testA1, 0);
-	memmove(testA2 + 1, testA2, 5);
-	memmove(testA2 + 1, testA2, 0);
-	printf("%s\n", testA1);
+	memmove(testA2 +1 , testA2, 5);
+	memmove(testA2 +1 , testA2, 0);
+	printf("A1%s\n", testA1);
+	printf("A2%s\n", testA2);
+
 	assert(strcmp(testA1, "aabcde") == 0);
 	assert(strcmp(testA1, testA2) == 0);
 
@@ -353,6 +349,8 @@ MODIFIER STRTRIM GIT
 	ft_memmove(testB1, testB1 + 1, 0);
 	memmove(testB2, testB2 + 1, 5);
 	memmove(testB2, testB2 + 1, 0);
+	printf("B1 %s\n", testB1);
+	printf("B2 %s\n", testB2);
 	assert(strcmp(testB1, "bcdeff") == 0);
 	assert(strcmp(testB1, testB2) == 0);
 
@@ -385,5 +383,5 @@ MODIFIER STRTRIM GIT
 
 
 
-		return (0);
+	return (0);
 }
