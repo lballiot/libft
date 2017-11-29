@@ -17,10 +17,10 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	char		*d;
 	const char	*s;
 
+	if (n == 0)
+		return (dest);
 	d = (char *)dest;
 	s = (const char *)src;
-	if (n == 0 || dest == NULL || src == NULL)
-		return (dest);
 	while (n--)
 		*d++ = *s++;
 	return (dest);

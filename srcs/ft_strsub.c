@@ -20,9 +20,10 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len)
 	i = 0;
 	if (start > ft_strlen(s) || len > ft_strlen(s) || s == NULL)
 		return (NULL);
-	if (!(str = (char *)malloc(sizeof(char *) * (len + 1))))
+	if (!(str = (char *)malloc(sizeof(char) * (len + 1))))
 		return (NULL);
-	while (len-- != 0 && start != '\0')
+	while (len-- != 0 && s[start] != '\0')
 		str[i++] = s[start++];
+	str[i] = '\0';
 	return (str);
 }

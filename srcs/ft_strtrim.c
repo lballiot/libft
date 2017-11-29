@@ -19,20 +19,26 @@ char	*ft_strtrim(char const *s)
 	int end;
 	int start;
 
+
 	if (!s)
 		return (NULL);
 	str = (char *)s;
 	i = ft_strlen(s) - 1;
-	while (str [i] && (str[i] == ' ' || str[i] == '\t' || str[i] == '\n'))
+	while (str[i] && (str[i] == ' ' || str[i] == '\t' || str[i] == '\n'))
 		i--;
+//	str[i+1] = '\0';
+
 	end = i;
 	i = 0;
-	while (str [i] && (str[i] == ' ' || str[i] == '\t' || str[i] == '\n'))
+	while (str[i] && (str[i] == ' ' || str[i] == '\t' || str[i] == '\n'))
 		i++;
 	start = i;
 	i = end - start + 1;
-	if (!(str = (char*)malloc(sizeof(char *) * i)))
+	if (i < 0)
+		i = 0;
+	if (!(str = (char*)malloc(sizeof(char) * i)))
 		return (NULL);
 	ft_strncpy(str, (const char *)s + start, i);
+	
 	return (str);
 }
