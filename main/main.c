@@ -15,101 +15,101 @@
 int		main(int ac, char **av)
 {
 	(void)ac;
-	printf("STRLEN\n");
-	printf("fct  : %lu\n", ft_strlen(av[1]));
-	printf("real : %lu\n", strlen(av[1]));
+	/*	printf("STRLEN\n");
+		printf("fct  : %lu\n", ft_strlen(av[1]));
+		printf("real : %lu\n", strlen(av[1]));
 
-	printf("\nSTRDUP\n");
-	printf("fct  : %s\n", ft_strdup(av[1]));
-	printf("real : %s\n", strdup(av[1]));
+		printf("\nSTRDUP\n");
+		printf("fct  : %s\n", ft_strdup(av[1]));
+		printf("real : %s\n", strdup(av[1]));
 
-	printf("\nISALPHA\n");
-	printf("fct  : %d\n", ft_isalpha(atoi(av[1])));
-	printf("real : %d\n", isalpha(atoi(av[1])));
+		printf("\nISALPHA\n");
+		printf("fct  : %d\n", ft_isalpha(atoi(av[1])));
+		printf("real : %d\n", isalpha(atoi(av[1])));
 
-	printf("\nISDIGIT\n");
-	printf("fct  : %d\n", ft_isdigit(atoi(av[1])));
-	printf("real : %d\n", isdigit(atoi(av[1])));
+		printf("\nISDIGIT\n");
+		printf("fct  : %d\n", ft_isdigit(atoi(av[1])));
+		printf("real : %d\n", isdigit(atoi(av[1])));
 
-	printf("\nISALNUM\n");
-	printf("fct  : %d\n", ft_isalnum(atoi(av[1])));
-	printf("real : %d\n", isalnum(atoi(av[1])));
+		printf("\nISALNUM\n");
+		printf("fct  : %d\n", ft_isalnum(atoi(av[1])));
+		printf("real : %d\n", isalnum(atoi(av[1])));
 
-	printf("\nISASCII\n");
-	printf("fct  : %d\n", ft_isascii(atoi(av[1])));
-	printf("real : %d\n", isascii(atoi(av[1])));
+		printf("\nISASCII\n");
+		printf("fct  : %d\n", ft_isascii(atoi(av[1])));
+		printf("real : %d\n", isascii(atoi(av[1])));
 
-	printf("\nISPRINT\n");
-	printf("fct  : %d\n", ft_isprint(atoi(av[1])));
-	printf("real : %d\n", isprint(atoi(av[1])));
+		printf("\nISPRINT\n");
+		printf("fct  : %d\n", ft_isprint(atoi(av[1])));
+		printf("real : %d\n", isprint(atoi(av[1])));
 
-	printf("\nTOUPPER\n");
-	printf("fct  : %d\n", ft_toupper(atoi(av[1])));
-	printf("real : %d\n", toupper(atoi(av[1])));
+		printf("\nTOUPPER\n");
+		printf("fct  : %d\n", ft_toupper(atoi(av[1])));
+		printf("real : %d\n", toupper(atoi(av[1])));
 
-	printf("\nTOLOWER\n");
-	printf("fct  : %d\n", ft_tolower(atoi(av[1])));
-	printf("real : %d\n", tolower(atoi(av[1])));
+		printf("\nTOLOWER\n");
+		printf("fct  : %d\n", ft_tolower(atoi(av[1])));
+		printf("real : %d\n", tolower(atoi(av[1])));
 
-	printf("\nSTRCMP\n");
-	printf("fct  : %d\n", ft_strcmp(av[1], av[2]));
-	printf("real : %d\n", strcmp(av[1], av[2]));
+		printf("\nSTRCMP\n");
+		printf("fct  : %d\n", ft_strcmp(av[1], av[2]));
+		printf("real : %d\n", strcmp(av[1], av[2]));
 
-	printf("\nSTRNCMP\n");
-	printf("fct  : %d\n", ft_strncmp(av[1], av[2], atoi(av[3])));
-	printf("real : %d\n", strncmp(av[1], av[2], atoi(av[3])));
+		printf("\nSTRNCMP\n");
+		printf("fct  : %d\n", ft_strncmp(av[1], av[2], atoi(av[3])));
+		printf("real : %d\n", strncmp(av[1], av[2], atoi(av[3])));
 
-	printf("\nSTRSTR\n");
-	static char buf[] = "Ceci n'est pas une pipe.";
-	static char buf2[] = "ozarabozaraboze";
-	printf("fct  : %s\n", ft_strstr(buf, "une"));
-	printf("real : %s\n", strstr(buf, "une"));
-	assert(ft_strstr(buf, "une") == strstr(buf, "une"));
-	printf("fct  : %s\n", ft_strstr(buf, "C"));
-	printf("real : %s\n", strstr(buf, "C"));
-	printf("fct  : %s\n", ft_strstr(buf, "."));
-	printf("real : %s\n", strstr(buf, "."));
-	printf("fct  : %s\n", ft_strstr(buf, "aaaaa"));
-	printf("real : %s\n", strstr(buf, "aaaaa"));
-	printf("fct  : %s\n", ft_strstr(buf2, "ozaraboze"));
-	printf("real : %s\n", strstr(buf2, "ozaraboze"));
-	printf("fct  : %s\n", ft_strstr(buf, "BWAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"));
-	printf("real : %s\n", strstr(buf, "BWAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"));
-	printf("fct  : %s\n", ft_strstr("", ""));
-	printf("real : %s\n", strstr("", ""));
-	printf("fct  : %s\n", ft_strstr(buf, "une"));
-	printf("real : %s\n", strstr(buf, "une"));
-	printf("fct  : %s\n", ft_strstr("J'ai fait pipapipapou en LV2", "pipapou"));
-	printf("real : %s\n", strstr("J'ai fait pipapipapou en LV2", "pipapou")); 
+		printf("\nSTRSTR\n");
+		static char buf[] = "Ceci n'est pas une pipe.";
+		static char buf2[] = "ozarabozaraboze";
+		printf("fct  : %s\n", ft_strstr(buf, "une"));
+		printf("real : %s\n", strstr(buf, "une"));
+		assert(ft_strstr(buf, "une") == strstr(buf, "une"));
+		printf("fct  : %s\n", ft_strstr(buf, "C"));
+		printf("real : %s\n", strstr(buf, "C"));
+		printf("fct  : %s\n", ft_strstr(buf, "."));
+		printf("real : %s\n", strstr(buf, "."));
+		printf("fct  : %s\n", ft_strstr(buf, "aaaaa"));
+		printf("real : %s\n", strstr(buf, "aaaaa"));
+		printf("fct  : %s\n", ft_strstr(buf2, "ozaraboze"));
+		printf("real : %s\n", strstr(buf2, "ozaraboze"));
+		printf("fct  : %s\n", ft_strstr(buf, "BWAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"));
+		printf("real : %s\n", strstr(buf, "BWAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"));
+		printf("fct  : %s\n", ft_strstr("", ""));
+		printf("real : %s\n", strstr("", ""));
+		printf("fct  : %s\n", ft_strstr(buf, "une"));
+		printf("real : %s\n", strstr(buf, "une"));
+		printf("fct  : %s\n", ft_strstr("J'ai fait pipapipapou en LV2", "pipapou"));
+		printf("real : %s\n", strstr("J'ai fait pipapipapou en LV2", "pipapou")); 
 
-	printf("\nSTRCPY\n");
-	char var[6], var2[6];
-	printf("fct  : %s\n", ft_strcpy(var, "abcde"));
-	printf("real : %s\n", strcpy(var2, "abcde"));
+		printf("\nSTRCPY\n");
+		char var[6], var2[6];
+		printf("fct  : %s\n", ft_strcpy(var, "abcde"));
+		printf("real : %s\n", strcpy(var2, "abcde"));
 	printf("fct  : %s\n", ft_strcpy(var, "abc"));
 	printf("real : %s\n", strcpy(var2, "abc"));
 	printf("fct  : %s\n", ft_strcpy(var, ""));
 	printf("real : %s\n", strcpy(var2, ""));
 
 	printf("\nSTRNCPY\n");
-	static char buf[] = "Ceci n'est pas une pipe.";
-	static char buf2[6];
+	static char bufc[] = "Ceci n'est pas une pipe.";
+	static char bufc2[6];
 	printf("fct  : %s\n", ft_strncpy(av[1], av[2], 3));
 	printf("real : %s\n", strncpy(av[1], av[2], 3));
-	printf("fct  : %s\n", ft_strncpy(buf, "abcde", 3));
-	printf("real : %s\n", strncpy(buf, "abcde", 3));
-	printf("fct  : %s\n", ft_strncpy(buf2, "tititata", 5));
-	printf("real : %s\n", strncpy(buf2, "tititata", 5));
-	printf("fct  : %s\n", ft_strncpy(buf2, "toto", 2));
-	printf("real : %s\n", strncpy(buf2, "toto", 2));
-	printf("fct  : %s\n", ft_strncpy(buf, "", 1));
-	printf("real : %s\n", strncpy(buf, "", 1));
-	printf("fct  : %s\n", ft_strncpy(buf, "tata", 8));
-	printf("real : %s\n", strncpy(buf, "tata", 8));
-	printf("fct  : %s\n", ft_strncpy(buf2, "tata", 0));
-	printf("real : %s\n", strncpy(buf2, "tata", 0));
-	printf("fct  : %s\n", ft_strncpy(buf2, "abc\0\0", 5));
-	printf("real : %s\n", strncpy(buf2, "abc\0\0", 5));
+	printf("fct  : %s\n", ft_strncpy(bufc, "abcde", 3));
+	printf("real : %s\n", strncpy(bufc, "abcde", 3));
+	printf("fct  : %s\n", ft_strncpy(bufc2, "tititata", 5));
+	printf("real : %s\n", strncpy(bufc2, "tititata", 5));
+	printf("fct  : %s\n", ft_strncpy(bufc2, "toto", 2));
+	printf("real : %s\n", strncpy(bufc2, "toto", 2));
+	printf("fct  : %s\n", ft_strncpy(bufc, "", 1));
+	printf("real : %s\n", strncpy(bufc, "", 1));
+	printf("fct  : %s\n", ft_strncpy(bufc, "tata", 8));
+	printf("real : %s\n", strncpy(bufc, "tata", 8));
+	printf("fct  : %s\n", ft_strncpy(bufc2, "tata", 0));
+	printf("real : %s\n", strncpy(bufc2, "tata", 0));
+	printf("fct  : %s\n", ft_strncpy(bufc2, "abc\0\0", 5));
+	printf("real : %s\n", strncpy(bufc2, "abc\0\0", 5));
 
 	printf("\nSTRNSTR\n");
 	printf("fct  : %s\n", ft_strnstr("un deux 9", "deux", 9));
@@ -158,19 +158,19 @@ int		main(int ac, char **av)
 	printf("real : %s\n", strcat(av[3], "toto"));
 
 	printf("\nSTRNCAT\n");
-	char buf[20];
+	char bufcat[20];
 
-	strcpy(buf, "1234567890123456789");
-	strcpy(buf, "To be ");
-	ft_strncat(buf, "or not to be", 6);
-	assert(strcmp(buf, "To be or not") == 0);
-	char buf2[20];
+	strcpy(bufcat, "1234567890123456789");
+	strcpy(bufcat, "To be ");
+	ft_strncat(bufcat, "or not to be", 6);
+	assert(strcmp(bufcat, "To be or not") == 0);
+	char bufcat2[20];
 
-	strcpy(buf2, "To be ");
-	ft_strncat(buf2, "or not to be", 6);
-	ft_strncat(buf2, "efefef", 0);
-	assert(strcmp(buf2, "To be or not") == 0);
-	assert(buf2 == ft_strncat(buf2, "", 0));
+	strcpy(bufcat2, "To be ");
+	ft_strncat(bufcat2, "or not to be", 6);
+	ft_strncat(bufcat2, "efefef", 0);
+	assert(strcmp(bufcat2, "To be or not") == 0);
+	assert(bufcat2 == ft_strncat(bufcat2, "", 0));
 	printf("fct  : %s\n", ft_strncat(av[1], av[2], atoi(av[3])));
 	printf("real : %s\n", strncat(av[1], av[2], atoi(av[3])));
 
@@ -282,8 +282,8 @@ int		main(int ac, char **av)
 	printf("fct  :%s\n", ft_strtrim("\t\t\n\t\t  "));
 	printf("fct  :%s\n", ft_strtrim("\t\n  \tAAA \t BBB\t\n  \t"));
 	printf("fct  :%s\n", ft_strtrim(av[1]));
-	//	assert(strcmp(ft_strtrim("abc"), "abc") == 0);
-	//	assert(strcmp(ft_strtrim("\t\n  \tAAA \t BBB\t\n  \t"), "AAA \t BBB") == 0);
+		assert(strcmp(ft_strtrim("abc"), "abc") == 0);
+		assert(strcmp(ft_strtrim("\t\n  \tAAA \t BBB\t\n  \t"), "AAA \t BBB") == 0);
 
 	printf("\nFT_MEMALLOC\n");
 	printf("fct  :%p\n", ft_memalloc(atoi(av[1])));
@@ -368,6 +368,141 @@ int		main(int ac, char **av)
 	ft_memcpy(b1, b2, 100);
 	assert(memcmp(b1, b2, 100) == 0);
 	assert(ft_memcpy(b1, b2, 0) == b1);
+
+
+	printf("\nFT_ATOI\n");
+	printf("fct  :%d\n", ft_atoi(" -sfecf"));
+	printf("real :%d\n", atoi(" -sfecf"));
+	printf("fct  :%d\n", ft_atoi(""));
+	printf("real :%d\n", atoi(""));
+	printf("fct  :%d\n", ft_atoi("+2798"));
+	printf("real :%d\n", atoi("+2798"));
+	printf("fct  :%d\n", ft_atoi("+0089"));
+	printf("real :%d\n", atoi("+0089"));
+	printf("fct  :%d\n", ft_atoi("a56"));
+	printf("real :%d\n", atoi("a56"));
+	printf("fct  :%d\n", ft_atoi("      --s8"));
+	printf("real :%d\n", atoi("      --s8"));
+	printf("fct  :%d\n", ft_atoi("0001020304"));
+	printf("real :%d\n", atoi("0001020304"));
+	printf("fct  :%d\n", ft_atoi("000000000000000110"));
+	printf("real :%d\n", atoi("000000000000000110"));
+	printf("fct  :%d\n", ft_atoi("-153"));
+	printf("real :%d\n", atoi("-153"));
+	printf("fct  :%d\n", ft_atoi("+132"));
+	printf("real :%d\n", atoi("+132"));
+	printf("fct  :%d\n", ft_atoi("++876"));
+	printf("real :%d\n", atoi("++876"));
+	printf("fct  :%d\n", ft_atoi("--132"));
+	printf("real :%d\n", atoi("--132"));
+	printf("fct  :%d\n", ft_atoi("dwbk "));
+	printf("real :%d\n", atoi("dwbk "));
+	printf("fct  :%d\n", ft_atoi(" 1"));
+	printf("real :%d\n", atoi(" 1"));
+	printf("fct  :%d\n", ft_atoi("42jk "));
+	printf("real :%d\n", atoi("42jk "));
+	printf("fct  :%d\n", ft_atoi(" 21"));
+	printf("real :%d\n", atoi(" 21"));
+	printf("fct  :%d\n", ft_atoi("     32 "));
+	printf("real :%d\n", atoi("     32 "));
+	printf("fct  :%d\n", ft_atoi("\n          42 24"));
+	printf("real :%d\n", atoi("\n          42 24"));
+	printf("fct  :%d\n", ft_atoi("1-2"));
+	printf("real :%d\n", atoi("1-2"));
+	printf("fct  :%d\n", ft_atoi("4+2"));
+	printf("real :%d\n", atoi("4+2"));
+	printf("fct  :%d\n", ft_atoi("  +442"));
+	printf("real :%d\n", atoi("  +442"));
+	printf("fct  :%d\n", ft_atoi("  -4232"));
+	printf("real :%d\n", atoi("  -4232"));
+	printf("fct  :%d\n", ft_atoi("4,5"));
+	printf("real :%d\n", atoi("4,5"));
+	printf("fct  :%d\n", ft_atoi("+"));
+	printf("real :%d\n", atoi("+"));
+	printf("fct  :%d\n", ft_atoi("-"));
+	printf("real :%d\n", atoi("-"));
+	printf("fct  :%d\n", ft_atoi("-+1"));
+	printf("real :%d\n", atoi("-+1"));
+	printf("fct  :%d\n", ft_atoi("++1"));
+	printf("real :%d\n", atoi("-+1"));
+	printf("fct  :%d\n", ft_atoi("\200123"));
+	printf("real :%d\n", atoi("\200123"));
+	printf("fct  :%d\n", ft_atoi("123\200"));
+	printf("real :%d\n", atoi("123\200"));
+	printf("fct  :%d\n", ft_atoi("  \t\n  \r\r\v\f-899"));
+	printf("real :%d\n", atoi("  \t\n  \r\r\v\f-899"));
+	printf("fct  :%d\n", ft_atoi("-2147483648"));
+	printf("real :%d\n", atoi("-2147483648"));
+	printf("fct  :%d\n", ft_atoi("2147483647"));
+	printf("real :%d\n", atoi("2147483647"));
+
+
+	assert(ft_atoi(" -sfecf") == atoi(" -sfecf"));
+	assert(ft_atoi("") == atoi(""));
+	assert(ft_atoi("+2798") == atoi("+2798"));
+	assert(ft_atoi("+0089") == atoi("+0089"));
+	assert(ft_atoi("a56") == atoi("a56"));
+	assert(ft_atoi("    --s8") == atoi("    --s8"));
+	assert(ft_atoi("0001020304") == atoi("0001020304"));
+	assert(ft_atoi("000000000000000110") == atoi("000000000000000110"));
+	assert(ft_atoi("-153") == atoi("-153"));
+	assert(ft_atoi("+132") == atoi("+132"));
+	assert(ft_atoi("++876") == atoi("++876"));
+	assert(ft_atoi("--132") == atoi("--132"));
+	assert(ft_atoi("dwbk ") == atoi("dwbk "));
+	assert(ft_atoi(" 1") == atoi(" 1"));
+	assert(ft_atoi("42jk ") == atoi("42jk "));
+	assert(ft_atoi(" 21") == atoi(" 21"));
+	assert(ft_atoi("     32 ") == atoi("     32 "));
+	assert(ft_atoi("\n          42 24") == atoi("\n          42 24"));
+	assert(ft_atoi("1-2") == atoi("1-2"));
+	assert(ft_atoi("4+2") == atoi("4+2"));
+	assert(ft_atoi("  +442") == atoi("  +442"));
+	assert(ft_atoi("  -4232") == atoi("  -4232"));
+	assert(ft_atoi("4,5") == atoi("4,5"));
+	assert(ft_atoi("+") == atoi("+"));
+	assert(ft_atoi("-") == atoi("-"));
+	assert(ft_atoi("-+1") == atoi("-+1"));
+	assert(ft_atoi("+-1") == atoi("+-1"));
+	assert(ft_atoi("\200123") == atoi("\200123"));
+	assert(ft_atoi("123\200") == atoi("123\200"));
+	assert(ft_atoi("  \t\n  \r\r\v\f-899     ") == atoi("  \t\n  \r\r\v\f-899     "));
+	assert(ft_atoi("                    -2147483648") == atoi("                    -2147483648"));
+	assert(ft_atoi("     2147483647") == atoi("     2147483647"));
+*/
+
+
+
+		printf("\nFT_ITOA\n");
+		printf("%s\n", ft_itoa(atoi(av[1])));
+
+		printf("\nFT_MEMCCPY\n");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

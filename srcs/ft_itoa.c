@@ -12,7 +12,29 @@
 
 #include "../includes/libft.h"
 
+int		ft_nbdigit(int n)
+{
+	int		i;
+
+	i = 1;
+	if (n < 0)
+		i++;
+	while (n /= 10)
+		i++;
+	return (i);
+}
+
 char	*ft_itoa(int n)
 {
-	return (NULL);
+	char *str;
+	int i;
+
+	i = ft_nbdigit(n);
+	if(!(str = (char *)malloc(sizeof(char) * i + 1)))
+		return (NULL);
+	str[i] = '\0';
+	if (n = -2147483648)
+//		ft_strdup((const char)n);
+
+return (str);
 }
