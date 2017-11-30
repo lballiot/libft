@@ -6,7 +6,7 @@
 #    By: lballiot <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/13 10:48:12 by lballiot          #+#    #+#              #
-#    Updated: 2017/11/24 10:39:54 by lballiot         ###   ########.fr        #
+#    Updated: 2017/11/30 10:42:41 by lballiot         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,6 +14,7 @@ NAME = libft.a
 SRC = ./srcs/ft_memset.c \
 	  ./srcs/ft_bzero.c \
 	  ./srcs/ft_memcpy.c \
+	  ./srcs/ft_memccpy.c \
 	  ./srcs/ft_memmove.c \
 	  ./srcs/ft_memchr.c \
 	  ./srcs/ft_memcmp.c \

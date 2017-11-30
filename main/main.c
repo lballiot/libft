@@ -6,7 +6,7 @@
 /*   By: lballiot <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 10:06:08 by lballiot          #+#    #+#             */
-/*   Updated: 2017/11/29 11:32:26 by lballiot         ###   ########.fr       */
+/*   Updated: 2017/11/30 12:11:30 by lballiot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,8 +94,9 @@ int		main(int ac, char **av)
 	printf("\nSTRNCPY\n");
 	static char bufc[] = "Ceci n'est pas une pipe.";
 	static char bufc2[6];
-	printf("fct  : %s\n", ft_strncpy(av[1], av[2], 3));
-	printf("real : %s\n", strncpy(av[1], av[2], 3));
+
+	printf("fct  : %s\n", ft_strncpy(av[1], av[2], atoi(av[3])));
+	printf("real : %s\n", strncpy(av[4], av[5], atoi(av[3])));
 	printf("fct  : %s\n", ft_strncpy(bufc, "abcde", 3));
 	printf("real : %s\n", strncpy(bufc, "abcde", 3));
 	printf("fct  : %s\n", ft_strncpy(bufc2, "tititata", 5));
@@ -471,13 +472,29 @@ int		main(int ac, char **av)
 	assert(ft_atoi("     2147483647") == atoi("     2147483647"));
 */
 
-
-
 		printf("\nFT_ITOA\n");
-		printf("%s\n", ft_itoa(atoi(av[1])));
+		printf("fct  :%s\n", ft_itoa(atoi(av[1])));
+		assert(strcmp(ft_itoa(0), "0") == 0);
+		assert(strcmp(ft_itoa(-1234), "-1234") == 0);
+		assert(strcmp(ft_itoa(123456000), "123456000") == 0);
+		assert(strcmp(ft_itoa(-2147483648), "-2147483648") == 0);
+
 
 		printf("\nFT_MEMCCPY\n");
+/*		char buf1[] = "Ceci est un test.";
+		char buf2[200];
+		void *p1, *p2;
 
+		p1 = memccpy(buf2, buf1, 'i', 10);
+		p2 = ft_memccpy(buf2, buf1, 'i', 10);
+		assert(p1 == p2);
+		assert(ft_memccpy(buf2, buf1, 'k', 5) == 0);
+		assert(ft_memccpy(buf2, buf1, 0, 0) == memccpy(buf2, buf1, 0, 0));
+		assert(ft_memccpy(buf2, buf1, 0, sizeof(buf1)) == memccpy(buf2, buf1, 0, sizeof(buf1)));
+		assert(ft_memccpy(buf2, buf1, 'C', 10) == buf2 + 1);
+		printf("fct  :%s\n", ft_memccpy(av[1], av[2], 'y', 6));
+		printf("real :%s\n", memccpy(buf1, av[2], '0', 10));
+		printf("real :%s\n", memccpy(av[3], av[4], 'y', 6));*/
 
 
 
