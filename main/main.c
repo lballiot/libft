@@ -6,7 +6,7 @@
 /*   By: lballiot <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 10:06:08 by lballiot          #+#    #+#             */
-/*   Updated: 2017/12/01 11:59:48 by lballiot         ###   ########.fr       */
+/*   Updated: 2017/12/01 12:08:50 by lballiot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -373,7 +373,7 @@ int		main(int ac, char **av)
 	ft_memcpy(b1, b2, 100);
 	assert(memcmp(b1, b2, 100) == 0);
 	assert(ft_memcpy(b1, b2, 0) == b1);
-
+*/
 
 	printf("\nFT_ATOI\n");
 	printf("fct  :%d\n", ft_atoi(" -sfecf"));
@@ -440,7 +440,8 @@ int		main(int ac, char **av)
 	printf("real :%d\n", atoi("-2147483648"));
 	printf("fct  :%d\n", ft_atoi("2147483647"));
 	printf("real :%d\n", atoi("2147483647"));
-
+	printf("fct  :%d\n", ft_atoi(av[1]));
+	printf("real :%d\n", atoi(av[1]));
 
 	assert(ft_atoi(" -sfecf") == atoi(" -sfecf"));
 	assert(ft_atoi("") == atoi(""));
@@ -474,7 +475,7 @@ int		main(int ac, char **av)
 	assert(ft_atoi("  \t\n  \r\r\v\f-899     ") == atoi("  \t\n  \r\r\v\f-899     "));
 	assert(ft_atoi("                    -2147483648") == atoi("                    -2147483648"));
 	assert(ft_atoi("     2147483647") == atoi("     2147483647"));
-*/
+/*
 
 		printf("\nFT_ITOA\n");
 		printf("fct  :%s\n", ft_itoa(atoi(av[1])));
