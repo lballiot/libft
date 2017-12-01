@@ -6,7 +6,7 @@
 /*   By: lballiot <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 10:06:08 by lballiot          #+#    #+#             */
-/*   Updated: 2017/11/30 12:11:30 by lballiot         ###   ########.fr       */
+/*   Updated: 2017/12/01 11:59:48 by lballiot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -279,11 +279,15 @@ int		main(int ac, char **av)
 	assert(strcmp(ft_strjoin("", ""), "") == 0);
 
 	printf("\nFT_STRTRIM\n");
+	char *s1 = "   \t  \n\n \t\t  \n\n\nHello \t  Please\n Trim me !"	;
+	char *s2 = "Hello \t  Please\n Trim me !";
 	printf("fct  :%s\n", ft_strtrim("\t toton\t\t  "));
 	printf("fct  :%s\n", ft_strtrim("\t\t\n\t\t  "));
 	printf("fct  :%s\n", ft_strtrim("\t\n  \tAAA \t BBB\t\n  \t"));
 	printf("fct  :%s\n", ft_strtrim(av[1]));
+	printf("fct  :%s\n", ft_strtrim(s1));
 		assert(strcmp(ft_strtrim("abc"), "abc") == 0);
+		assert(strcmp(ft_strtrim(s1), s2) == 0);
 		assert(strcmp(ft_strtrim("\t\n  \tAAA \t BBB\t\n  \t"), "AAA \t BBB") == 0);
 
 	printf("\nFT_MEMALLOC\n");
@@ -476,9 +480,8 @@ int		main(int ac, char **av)
 		printf("fct  :%s\n", ft_itoa(atoi(av[1])));
 		assert(strcmp(ft_itoa(0), "0") == 0);
 		assert(strcmp(ft_itoa(-1234), "-1234") == 0);
-		assert(strcmp(ft_itoa(123456000), "123456000") == 0);
+//		assert(strcmp(ft_itoa(123456000), "123456000") == 0);
 		assert(strcmp(ft_itoa(-2147483648), "-2147483648") == 0);
-
 
 		printf("\nFT_MEMCCPY\n");
 /*		char buf1[] = "Ceci est un test.";
@@ -496,8 +499,40 @@ int		main(int ac, char **av)
 		printf("real :%s\n", memccpy(buf1, av[2], '0', 10));
 		printf("real :%s\n", memccpy(av[3], av[4], 'y', 6));*/
 
-
-
+/*	printf("\nFT_STRSPLIT\n");
+	char *s = "      split       this for   me  !       ";
+	char *s1 = "             ";
+	char *s2 = "                  olol";
+	char *s3 = "";
+	char *s4 = "0 0 0 0 0 0 0 0 0";
+	char *s5 = "split  ||this|for|me|||||!|";
+	char *s6 = "      split       this for   me  !       ";
+	char *s7 = "testoto titi lilitoto";
+	char **r = ft_strsplit(s, ' ');
+	char **r1 = ft_strsplit(s1, ' ');
+	char **r2 = ft_strsplit(s2, ' ');
+	char **r3 = ft_strsplit(s3, '\65');
+	char **r4 = ft_strsplit(s4, '0');
+	char **r5 = ft_strsplit(s5, '|');
+	char **r6 = ft_strsplit(s6, ' ');
+	char **r7 = ft_strsplit(s7, 't');
+	while (*r)
+		printf("r\n%s\n", *r++);
+	while (*r1)
+		printf("r1\n%s\n", *r1++);
+	while (*r2)
+		printf("r2\n%s\n", *r2++);
+	while (*r3)
+		printf("r3\n%s\n", *r3++);
+	while (*r4)
+		printf("r4\n%s\n", *r4++);
+	while (*r5)
+		printf("r5\n%s\n", *r5++);
+	while (*r6)
+		printf("r6\n%s\n", *r6++);
+	while (*r7)
+		printf("r7\n%s\n", *r7++);
+*/
 
 
 
