@@ -22,7 +22,6 @@ char	*ft_strnew(size_t size)
 		return (NULL);
 	if (!(str = malloc((size + 1) * (sizeof(char)))))
 		return (NULL);
-	while (i >= 0)
-		str[--i] = '\0';
+	ft_bzero((void *)str, size);
 	return (str);
 }

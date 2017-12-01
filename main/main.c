@@ -6,7 +6,7 @@
 /*   By: lballiot <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 10:06:08 by lballiot          #+#    #+#             */
-/*   Updated: 2017/12/01 12:08:50 by lballiot         ###   ########.fr       */
+/*   Updated: 2017/11/30 12:11:30 by lballiot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,15 @@ int		main(int ac, char **av)
 		printf("fct  : %d\n", ft_strcmp(av[1], av[2]));
 		printf("real : %d\n", strcmp(av[1], av[2]));
 
+		char *s1 = "\x12\xff\x65\x12\xbd\xde\xad";
+		char *s2 = "\x12\x02";
+		char *s11 = "\0";
+		char *s22 = "\200";
+		printf("fct  : %d\n", ft_strcmp(s1, s2));
+		printf("real : %d\n", strcmp(s1, s2));
+		printf("fct  : %d\n", ft_strcmp(s11, s22));
+		printf("real : %d\n", strcmp(s11, s22));
+
 		printf("\nSTRNCMP\n");
 		printf("fct  : %d\n", ft_strncmp(av[1], av[2], atoi(av[3])));
 		printf("real : %d\n", strncmp(av[1], av[2], atoi(av[3])));
@@ -77,15 +86,15 @@ int		main(int ac, char **av)
 		printf("real : %s\n", strstr(buf, "BWAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"));
 		printf("fct  : %s\n", ft_strstr("", ""));
 		printf("real : %s\n", strstr("", ""));
-		printf("fct  : %s\n", ft_strstr(buf, "une"));
-		printf("real : %s\n", strstr(buf, "une"));
-		printf("fct  : %s\n", ft_strstr("J'ai fait pipapipapou en LV2", "pipapou"));
-		printf("real : %s\n", strstr("J'ai fait pipapipapou en LV2", "pipapou")); 
+	printf("fct  : %s\n", ft_strstr(buf, "une"));
+	printf("real : %s\n", strstr(buf, "une"));
+	printf("fct  : %s\n", ft_strstr("J'ai fait pipapipapou en LV2", "pipapou"));
+	printf("real : %s\n", strstr("J'ai fait pipapipapou en LV2", "pipapou"));
 
-		printf("\nSTRCPY\n");
-		char var[6], var2[6];
-		printf("fct  : %s\n", ft_strcpy(var, "abcde"));
-		printf("real : %s\n", strcpy(var2, "abcde"));
+	printf("\nSTRCPY\n");
+	char var[6], var2[6];
+	printf("fct  : %s\n", ft_strcpy(var, "abcde"));
+	printf("real : %s\n", strcpy(var2, "abcde"));
 	printf("fct  : %s\n", ft_strcpy(var, "abc"));
 	printf("real : %s\n", strcpy(var2, "abc"));
 	printf("fct  : %s\n", ft_strcpy(var, ""));
@@ -111,6 +120,37 @@ int		main(int ac, char **av)
 	printf("real : %s\n", strncpy(bufc2, "tata", 0));
 	printf("fct  : %s\n", ft_strncpy(bufc2, "abc\0\0", 5));
 	printf("real : %s\n", strncpy(bufc2, "abc\0\0", 5));
+
+	char *src = "";
+	char dst1[30];
+	char dst2[30];
+	size_t max = 29;
+
+	memset(dst1, 'B', sizeof(dst1));
+	memset(dst2, 'B', sizeof(dst2));
+
+	printf("real :%s\n", strncpy(dst1, src, max));
+	printf("fct  :%s\n", ft_strncpy(dst2, src, max));
+
+	char *src2 = "AAAAAAAAAA";
+	char dst11[] = "BBBBBBBBBBBBBBBBBBBB";
+	char dst22[] = "BBBBBBBBBBBBBBBBBBBB";
+	size_t len = strlen(dst11);
+
+	printf("real :%s\n", strncpy(dst11, src2, len));
+	printf("fct  :%s\n", ft_strncpy(dst22, src2, len));
+
+	char *src3 = "stars";
+	char dst13[50];
+	char dst23[50];
+	size_t lenn = 50;
+
+	memset(dst1, 'B', sizeof(dst13));
+	memset(dst2, 'B', sizeof(dst23));
+
+	printf("real :%s\n", strncpy(dst13, src3, lenn));
+	printf("fct  :%s\n", ft_strncpy(dst23, src3, lenn));
+
 
 	printf("\nSTRNSTR\n");
 	printf("fct  : %s\n", ft_strnstr("un deux 9", "deux", 9));
@@ -279,16 +319,12 @@ int		main(int ac, char **av)
 	assert(strcmp(ft_strjoin("", ""), "") == 0);
 
 	printf("\nFT_STRTRIM\n");
-	char *s1 = "   \t  \n\n \t\t  \n\n\nHello \t  Please\n Trim me !"	;
-	char *s2 = "Hello \t  Please\n Trim me !";
 	printf("fct  :%s\n", ft_strtrim("\t toton\t\t  "));
 	printf("fct  :%s\n", ft_strtrim("\t\t\n\t\t  "));
 	printf("fct  :%s\n", ft_strtrim("\t\n  \tAAA \t BBB\t\n  \t"));
 	printf("fct  :%s\n", ft_strtrim(av[1]));
-	printf("fct  :%s\n", ft_strtrim(s1));
-		assert(strcmp(ft_strtrim("abc"), "abc") == 0);
-		assert(strcmp(ft_strtrim(s1), s2) == 0);
-		assert(strcmp(ft_strtrim("\t\n  \tAAA \t BBB\t\n  \t"), "AAA \t BBB") == 0);
+	assert(strcmp(ft_strtrim("abc"), "abc") == 0);
+	assert(strcmp(ft_strtrim("\t\n  \tAAA \t BBB\t\n  \t"), "AAA \t BBB") == 0);
 
 	printf("\nFT_MEMALLOC\n");
 	printf("fct  :%p\n", ft_memalloc(atoi(av[1])));
@@ -373,7 +409,7 @@ int		main(int ac, char **av)
 	ft_memcpy(b1, b2, 100);
 	assert(memcmp(b1, b2, 100) == 0);
 	assert(ft_memcpy(b1, b2, 0) == b1);
-*/
+
 
 	printf("\nFT_ATOI\n");
 	printf("fct  :%d\n", ft_atoi(" -sfecf"));
@@ -440,8 +476,7 @@ int		main(int ac, char **av)
 	printf("real :%d\n", atoi("-2147483648"));
 	printf("fct  :%d\n", ft_atoi("2147483647"));
 	printf("real :%d\n", atoi("2147483647"));
-	printf("fct  :%d\n", ft_atoi(av[1]));
-	printf("real :%d\n", atoi(av[1]));
+
 
 	assert(ft_atoi(" -sfecf") == atoi(" -sfecf"));
 	assert(ft_atoi("") == atoi(""));
@@ -475,66 +510,38 @@ int		main(int ac, char **av)
 	assert(ft_atoi("  \t\n  \r\r\v\f-899     ") == atoi("  \t\n  \r\r\v\f-899     "));
 	assert(ft_atoi("                    -2147483648") == atoi("                    -2147483648"));
 	assert(ft_atoi("     2147483647") == atoi("     2147483647"));
-/*
+	*/
+		/*
+		   printf("\nFT_ITOA\n");
+		   printf("fct  :%s\n", ft_itoa(atoi(av[1])));
+		   assert(strcmp(ft_itoa(0), "0") == 0);
+		   assert(strcmp(ft_itoa(-1234), "-1234") == 0);
+		   assert(strcmp(ft_itoa(123456000), "123456000") == 0);
+		   assert(strcmp(ft_itoa(-2147483648), "-2147483648") == 0);
 
-		printf("\nFT_ITOA\n");
-		printf("fct  :%s\n", ft_itoa(atoi(av[1])));
-		assert(strcmp(ft_itoa(0), "0") == 0);
-		assert(strcmp(ft_itoa(-1234), "-1234") == 0);
-//		assert(strcmp(ft_itoa(123456000), "123456000") == 0);
-		assert(strcmp(ft_itoa(-2147483648), "-2147483648") == 0);
-
-		printf("\nFT_MEMCCPY\n");
-/*		char buf1[] = "Ceci est un test.";
-		char buf2[200];
-		void *p1, *p2;
-
-		p1 = memccpy(buf2, buf1, 'i', 10);
-		p2 = ft_memccpy(buf2, buf1, 'i', 10);
-		assert(p1 == p2);
-		assert(ft_memccpy(buf2, buf1, 'k', 5) == 0);
-		assert(ft_memccpy(buf2, buf1, 0, 0) == memccpy(buf2, buf1, 0, 0));
-		assert(ft_memccpy(buf2, buf1, 0, sizeof(buf1)) == memccpy(buf2, buf1, 0, sizeof(buf1)));
-		assert(ft_memccpy(buf2, buf1, 'C', 10) == buf2 + 1);
-		printf("fct  :%s\n", ft_memccpy(av[1], av[2], 'y', 6));
-		printf("real :%s\n", memccpy(buf1, av[2], '0', 10));
-		printf("real :%s\n", memccpy(av[3], av[4], 'y', 6));*/
-
-/*	printf("\nFT_STRSPLIT\n");
-	char *s = "      split       this for   me  !       ";
-	char *s1 = "             ";
-	char *s2 = "                  olol";
-	char *s3 = "";
-	char *s4 = "0 0 0 0 0 0 0 0 0";
-	char *s5 = "split  ||this|for|me|||||!|";
-	char *s6 = "      split       this for   me  !       ";
-	char *s7 = "testoto titi lilitoto";
-	char **r = ft_strsplit(s, ' ');
-	char **r1 = ft_strsplit(s1, ' ');
-	char **r2 = ft_strsplit(s2, ' ');
-	char **r3 = ft_strsplit(s3, '\65');
-	char **r4 = ft_strsplit(s4, '0');
-	char **r5 = ft_strsplit(s5, '|');
-	char **r6 = ft_strsplit(s6, ' ');
-	char **r7 = ft_strsplit(s7, 't');
-	while (*r)
-		printf("r\n%s\n", *r++);
-	while (*r1)
-		printf("r1\n%s\n", *r1++);
-	while (*r2)
-		printf("r2\n%s\n", *r2++);
-	while (*r3)
-		printf("r3\n%s\n", *r3++);
-	while (*r4)
-		printf("r4\n%s\n", *r4++);
-	while (*r5)
-		printf("r5\n%s\n", *r5++);
-	while (*r6)
-		printf("r6\n%s\n", *r6++);
-	while (*r7)
-		printf("r7\n%s\n", *r7++);
 */
+		printf("\nFT_MEMCCPY\n");
+	/*		char buf1[] = "Ceci est un test.";
+			char buf2[200];
+			void *p1, *p2;
 
+			p1 = memccpy(buf2, buf1, 'i', 10);
+			p2 = ft_memccpy(buf2, buf1, 'i', 10);
+			assert(p1 == p2);
+			assert(ft_memccpy(buf2, buf1, 'k', 5) == 0);
+			assert(ft_memccpy(buf2, buf1, 0, 0) == memccpy(buf2, buf1, 0, 0));
+			assert(ft_memccpy(buf2, buf1, 0, sizeof(buf1)) == memccpy(buf2, buf1, 0, sizeof(buf1)));
+			assert(ft_memccpy(buf2, buf1, 'C', 10) == buf2 + 1);
+			printf("fct  :%s\n", ft_memccpy(av[1], av[2], 'y', 6));
+			printf("real :%s\n", memccpy(buf1, av[2], '0', 10));
+			printf("real :%s\n", memccpy(av[3], av[4], 'y', 6));*/
+
+	printf("\nFT_STRNEW\n");
+	size_t	size = 514;
+	int j = 0;
+	char	*ret = ft_strnew(size);
+
+			printf("%s\n", ret);
 
 
 
