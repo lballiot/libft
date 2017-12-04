@@ -14,15 +14,14 @@
 
 char	*ft_strnew(size_t size)
 {
+	int		i;
 	char	*str;
 
-	size = size + 1;
-	if (!(str = malloc((size) * (sizeof(char)))))
+	i = size;
+	if (size == 0)
 		return (NULL);
-	while (size != 0)
-	{
-		str[size - 1] = 0;
-		size--;
-	}
+	if (!(str = malloc((size + 1) * (sizeof(char)))))
+		return (NULL);
+	ft_bzero((void *)str, size);
 	return (str);
 }

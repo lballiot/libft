@@ -22,12 +22,12 @@ char	*ft_strtrim(char const *s)
 
 	if (!s)
 		return (NULL);
+	if (s[0] == '\0')
+		return ((char *)s);
 	str = (char *)s;
 	i = ft_strlen(s) - 1;
 	while (str[i] && (str[i] == ' ' || str[i] == '\t' || str[i] == '\n'))
 		i--;
-//	str[i+1] = '\0';
-
 	end = i;
 	i = 0;
 	while (str[i] && (str[i] == ' ' || str[i] == '\t' || str[i] == '\n'))
@@ -39,6 +39,6 @@ char	*ft_strtrim(char const *s)
 	if (!(str = (char*)malloc(sizeof(char) * i)))
 		return (NULL);
 	ft_strncpy(str, (const char *)s + start, i);
-	
+
 	return (str);
 }

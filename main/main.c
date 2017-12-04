@@ -6,7 +6,7 @@
 /*   By: lballiot <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 10:06:08 by lballiot          #+#    #+#             */
-/*   Updated: 2017/12/04 11:56:08 by lballiot         ###   ########.fr       */
+/*   Updated: 2017/11/30 12:11:30 by lballiot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -299,26 +299,13 @@ int		main(int ac, char **av)
 	assert(b1[0] == 1);
 	assert(memcmp(memset(strdup("abcd"), 'A', 5), ft_memset(strdup("abcd"), 'A', 5), 5) == 0);
 	assert(memcmp(memset(strdup("abcd"), 0, 0), ft_memset(strdup("abcd"), 0, 0), 5) == 0);
-	
+
 	printf("\nFT_STRCHR\n");
-//	static char buf[] = "Je suis un poisson.";
-//	assert(strchr(buf, 'p') == ft_strchr(buf, 'p'));
-//	assert(strchr(buf, '0') == ft_strchr(buf, '0'));
-//	assert(ft_strchr(buf, 'J') == buf);
-//	assert(ft_strchr(buf, 'z') == 0);
-	char *src = "\0";
-	char *d1 = strchr(src, 'a');
-	char *d2 = ft_strchr(src, 'a');
-		
-printf("fct  :%s\n", d2);
-	printf("real :%s\n", d1);
-  	if (d1 == d2)
-		write(1, "toto\n", 5);
-	assert(d1 == d2);
-	assert(strcmp(d1, d2) == 0);
-printf("fct  :%s\n", ft_strchr("", 'a'));
-	printf("real :%s\n", strchr("", 'a'));
-	
+	static char buf[] = "Je suis un poisson.";
+	assert(strchr(buf, 'p') == ft_strchr(buf, 'p'));
+	assert(strchr(buf, '0') == ft_strchr(buf, '0'));
+	assert(ft_strchr(buf, 'J') == buf);
+	assert(ft_strchr(buf, 'z') == 0);
 
 	printf("\nFT_STRSUB\n");
 	static char *str = "Un jour je serai, le meilleur dresseur !";
@@ -489,10 +476,7 @@ printf("fct  :%s\n", ft_strchr("", 'a'));
 	printf("real :%d\n", atoi("-2147483648"));
 	printf("fct  :%d\n", ft_atoi("2147483647"));
 	printf("real :%d\n", atoi("2147483647"));
-	printf("fct  :%d\n", ft_atoi("-999999999999"));
-	printf("real :%d\n", atoi("-999999999999"));
-	printf("fct  :%d\n", ft_atoi("999999999999"));
-	printf("real :%d\n", atoi("999999999999"));
+
 
 	assert(ft_atoi(" -sfecf") == atoi(" -sfecf"));
 	assert(ft_atoi("") == atoi(""));
@@ -526,27 +510,17 @@ printf("fct  :%s\n", ft_strchr("", 'a'));
 	assert(ft_atoi("  \t\n  \r\r\v\f-899     ") == atoi("  \t\n  \r\r\v\f-899     "));
 	assert(ft_atoi("                    -2147483648") == atoi("                    -2147483648"));
 	assert(ft_atoi("     2147483647") == atoi("     2147483647"));
-	
-
+	*/
+		/*
 		   printf("\nFT_ITOA\n");
 		   printf("fct  :%s\n", ft_itoa(atoi(av[1])));
-			char *i1 = ft_itoa(-623);
-			char *i2 = ft_itoa(156);
-			char *i3 = ft_itoa(-0);
-			printf("%s\n", i1);
-			printf("%s\n", i2);
-			printf("%s\n", i3);
-		   
-		   
 		   assert(strcmp(ft_itoa(0), "0") == 0);
 		   assert(strcmp(ft_itoa(-1234), "-1234") == 0);
 		   assert(strcmp(ft_itoa(123456000), "123456000") == 0);
 		   assert(strcmp(ft_itoa(-2147483648), "-2147483648") == 0);
-*/
 
+*/
 		printf("\nFT_MEMCCPY\n");
-			printf("real :%s\n", memccpy(av[1], av[2], '0', 10));
-			printf("fct  :%s\n", ft_memccpy(av[3], av[4], '0', 10));
 	/*		char buf1[] = "Ceci est un test.";
 			char buf2[200];
 			void *p1, *p2;
@@ -560,8 +534,8 @@ printf("fct  :%s\n", ft_strchr("", 'a'));
 			assert(ft_memccpy(buf2, buf1, 'C', 10) == buf2 + 1);
 			printf("fct  :%s\n", ft_memccpy(av[1], av[2], 'y', 6));
 			printf("real :%s\n", memccpy(buf1, av[2], '0', 10));
-			printf("real :%s\n", memccpy(av[3], av[4], 'y', 6));
-*/
+			printf("real :%s\n", memccpy(av[3], av[4], 'y', 6));*/
+
 	printf("\nFT_STRNEW\n");
 	size_t	size = 514;
 	int j = 0;

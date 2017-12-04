@@ -6,13 +6,13 @@
 /*   By: lballiot <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 16:34:58 by lballiot          #+#    #+#             */
-/*   Updated: 2017/12/04 10:33:56 by lballiot         ###   ########.fr       */
+/*   Updated: 2017/11/13 16:39:07 by lballiot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_isprint(int c)
+int		ft_isprint(char c)
 {
-	if (32 <= c && c <= 126)
+	if (c >= 32 && c <= 126)
 		return (1);
 	return (0);
 }
