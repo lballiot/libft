@@ -6,13 +6,13 @@
 /*   By: lballiot <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/24 10:40:23 by lballiot          #+#    #+#             */
-/*   Updated: 2017/11/30 11:48:19 by lballiot         ###   ########.fr       */
+/*   Updated: 2017/12/04 11:32:30 by lballiot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-int		ft_nbdigit(int n)
+static int		ft_nbdigit(int n)
 {
 	int		i;
 
@@ -34,11 +34,11 @@ char	*ft_itoa(int n)
 	size = ft_nbdigit(n);
 	if (n == -2147483648)
 		return (ft_strdup("-2147483648"));
-	if(!(str = (char *)malloc(sizeof(char) * size + 1)))
+	if (!(str = (char *)malloc(sizeof(char) * size + 1)))
 		return (NULL);
 	str[size] = '\0';
 	j = size - 1;
-	if (n < 0)
+	if (n < 0 && n > -2147483648)
 	{
 		neg = 1;
 		n = -n;
@@ -52,6 +52,5 @@ char	*ft_itoa(int n)
 	}
 	if (neg == 1)
 		str[size] = '-';
-return (str);
+	return (str);
 }
-//	printf("n %d\n", n);

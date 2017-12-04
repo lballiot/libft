@@ -6,13 +6,13 @@
 /*   By: lballiot <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/01 11:11:26 by lballiot          #+#    #+#             */
-/*   Updated: 2017/12/01 11:19:47 by lballiot         ###   ########.fr       */
+/*   Updated: 2017/12/04 11:30:55 by lballiot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-int		ft_compteur(char const *s, int i, char ch)
+static int		ft_compteur(char const *s, int i, char ch)
 {
 	int		compteur;
 
@@ -37,7 +37,7 @@ int		ft_compteur(char const *s, int i, char ch)
 	return (compteur);
 }
 
-char	**ft_remplissage(char const *s, int i, char **tab, char ch)
+static char		**ft_remplissage(char const *s, int i, char **tab, char ch)
 {
 	int		size;
 	int		j;
@@ -66,7 +66,7 @@ char	**ft_remplissage(char const *s, int i, char **tab, char ch)
 	return (tab);
 }
 
-char	**ft_strsplit(char const *s, char c)
+char			**ft_strsplit(char const *s, char c)
 {
 	char	ch;
 	int		i;

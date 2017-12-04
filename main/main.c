@@ -6,7 +6,7 @@
 /*   By: lballiot <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 10:06:08 by lballiot          #+#    #+#             */
-/*   Updated: 2017/11/30 12:11:30 by lballiot         ###   ########.fr       */
+/*   Updated: 2017/12/04 11:26:10 by lballiot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -301,11 +301,11 @@ int		main(int ac, char **av)
 	assert(memcmp(memset(strdup("abcd"), 0, 0), ft_memset(strdup("abcd"), 0, 0), 5) == 0);
 	
 	printf("\nFT_STRCHR\n");
-	static char buf[] = "Je suis un poisson.";
-	assert(strchr(buf, 'p') == ft_strchr(buf, 'p'));
-	assert(strchr(buf, '0') == ft_strchr(buf, '0'));
-	assert(ft_strchr(buf, 'J') == buf);
-	assert(ft_strchr(buf, 'z') == 0);
+//	static char buf[] = "Je suis un poisson.";
+//	assert(strchr(buf, 'p') == ft_strchr(buf, 'p'));
+//	assert(strchr(buf, '0') == ft_strchr(buf, '0'));
+//	assert(ft_strchr(buf, 'J') == buf);
+//	assert(ft_strchr(buf, 'z') == 0);
 	char *src = "\0";
 	char *d1 = strchr(src, 'a');
 	char *d2 = ft_strchr(src, 'a');
@@ -314,6 +314,8 @@ printf("fct  :%s\n", d2);
 	printf("real :%s\n", d1);
   	if (d1 == d2)
 		write(1, "toto\n", 5);
+	assert(d1 == d2);
+	assert(strcmp(d1, d2) == 0);
 printf("fct  :%s\n", ft_strchr("", 'a'));
 	printf("real :%s\n", strchr("", 'a'));
 	
@@ -420,7 +422,7 @@ printf("fct  :%s\n", ft_strchr("", 'a'));
 	ft_memcpy(b1, b2, 100);
 	assert(memcmp(b1, b2, 100) == 0);
 	assert(ft_memcpy(b1, b2, 0) == b1);
-
+*/
 
 	printf("\nFT_ATOI\n");
 	printf("fct  :%d\n", ft_atoi(" -sfecf"));
@@ -487,8 +489,18 @@ printf("fct  :%s\n", ft_strchr("", 'a'));
 	printf("real :%d\n", atoi("-2147483648"));
 	printf("fct  :%d\n", ft_atoi("2147483647"));
 	printf("real :%d\n", atoi("2147483647"));
+	printf("fct  :%d\n", ft_atoi("-999999999999"));
+	printf("real :%d\n", atoi("-999999999999"));
+	printf("fct  :%d\n", ft_atoi("999999999999"));
+	printf("real :%d\n", atoi("999999999999"));
 
+	char n[40] = "-99999999999999999999999999";
 
+	int i1 = atoi(n);
+	int i2 = ft_atoi(n);
+	if (strcmp(i1, i2) == 0)
+		write(1, "OK", 2);
+	assert(ft_atoi("-999999999999") == atoi("-999999999999"));
 	assert(ft_atoi(" -sfecf") == atoi(" -sfecf"));
 	assert(ft_atoi("") == atoi(""));
 	assert(ft_atoi("+2798") == atoi("+2798"));
@@ -521,10 +533,18 @@ printf("fct  :%s\n", ft_strchr("", 'a'));
 	assert(ft_atoi("  \t\n  \r\r\v\f-899     ") == atoi("  \t\n  \r\r\v\f-899     "));
 	assert(ft_atoi("                    -2147483648") == atoi("                    -2147483648"));
 	assert(ft_atoi("     2147483647") == atoi("     2147483647"));
-	*/
-
+	
+/*
 		   printf("\nFT_ITOA\n");
 		   printf("fct  :%s\n", ft_itoa(atoi(av[1])));
+			char *i1 = ft_itoa(-623);
+			char *i2 = ft_itoa(156);
+			char *i3 = ft_itoa(-0);
+			printf("%s\n", i1);
+			printf("%s\n", i2);
+			printf("%s\n", i3);
+		   
+		   
 		   assert(strcmp(ft_itoa(0), "0") == 0);
 		   assert(strcmp(ft_itoa(-1234), "-1234") == 0);
 		   assert(strcmp(ft_itoa(123456000), "123456000") == 0);

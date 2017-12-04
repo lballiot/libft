@@ -6,11 +6,11 @@
 /*   By: lballiot <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/24 11:07:06 by lballiot          #+#    #+#             */
-/*   Updated: 2017/11/24 11:07:10 by lballiot         ###   ########.fr       */
+/*   Updated: 2017/12/04 10:19:15 by lballiot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strlen(char *str);
+#include "../includes/libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {

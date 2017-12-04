@@ -6,13 +6,11 @@
 /*   By: lballiot <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/15 09:21:46 by lballiot          #+#    #+#             */
-/*   Updated: 2017/11/15 09:25:09 by lballiot         ###   ########.fr       */
+/*   Updated: 2017/12/04 10:22:00 by lballiot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar(char c);
-
-void	ft_putstr(char const *s);
+#include "../includes/libft.h"
 
 void	ft_putendl(char const *s)
 {

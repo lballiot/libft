@@ -6,7 +6,7 @@
 /*   By: lballiot <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/23 14:48:47 by lballiot          #+#    #+#             */
-/*   Updated: 2017/11/29 13:23:26 by karakhirn        ###   ########.fr       */
+/*   Updated: 2017/12/04 11:33:54 by lballiot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,14 +22,14 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	if (n == 0)
 		return (dest);
 	if (str > dst)
-		 while (n--) 
-		 	*dst++ = *str++; 
+		while (n--)
+			*dst++ = *str++;
 	else
 	{
-		dst += n -1;
-		str += n -1;
-		 while (n--) 
-		 	*dst-- = *str--; 
+		dst += n - 1;
+		str += n - 1;
+		while (n--)
+			*dst-- = *str--;
 	}
-return (dest);
+	return (dest);
 }
