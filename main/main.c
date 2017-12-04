@@ -6,7 +6,7 @@
 /*   By: lballiot <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 10:06:08 by lballiot          #+#    #+#             */
-/*   Updated: 2017/12/04 11:26:10 by lballiot         ###   ########.fr       */
+/*   Updated: 2017/12/04 11:56:08 by lballiot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -422,7 +422,7 @@ printf("fct  :%s\n", ft_strchr("", 'a'));
 	ft_memcpy(b1, b2, 100);
 	assert(memcmp(b1, b2, 100) == 0);
 	assert(ft_memcpy(b1, b2, 0) == b1);
-*/
+
 
 	printf("\nFT_ATOI\n");
 	printf("fct  :%d\n", ft_atoi(" -sfecf"));
@@ -494,13 +494,6 @@ printf("fct  :%s\n", ft_strchr("", 'a'));
 	printf("fct  :%d\n", ft_atoi("999999999999"));
 	printf("real :%d\n", atoi("999999999999"));
 
-	char n[40] = "-99999999999999999999999999";
-
-	int i1 = atoi(n);
-	int i2 = ft_atoi(n);
-	if (strcmp(i1, i2) == 0)
-		write(1, "OK", 2);
-	assert(ft_atoi("-999999999999") == atoi("-999999999999"));
 	assert(ft_atoi(" -sfecf") == atoi(" -sfecf"));
 	assert(ft_atoi("") == atoi(""));
 	assert(ft_atoi("+2798") == atoi("+2798"));
@@ -534,7 +527,7 @@ printf("fct  :%s\n", ft_strchr("", 'a'));
 	assert(ft_atoi("                    -2147483648") == atoi("                    -2147483648"));
 	assert(ft_atoi("     2147483647") == atoi("     2147483647"));
 	
-/*
+
 		   printf("\nFT_ITOA\n");
 		   printf("fct  :%s\n", ft_itoa(atoi(av[1])));
 			char *i1 = ft_itoa(-623);
@@ -549,9 +542,11 @@ printf("fct  :%s\n", ft_strchr("", 'a'));
 		   assert(strcmp(ft_itoa(-1234), "-1234") == 0);
 		   assert(strcmp(ft_itoa(123456000), "123456000") == 0);
 		   assert(strcmp(ft_itoa(-2147483648), "-2147483648") == 0);
-
+*/
 
 		printf("\nFT_MEMCCPY\n");
+			printf("real :%s\n", memccpy(av[1], av[2], '0', 10));
+			printf("fct  :%s\n", ft_memccpy(av[3], av[4], '0', 10));
 	/*		char buf1[] = "Ceci est un test.";
 			char buf2[200];
 			void *p1, *p2;
@@ -565,8 +560,8 @@ printf("fct  :%s\n", ft_strchr("", 'a'));
 			assert(ft_memccpy(buf2, buf1, 'C', 10) == buf2 + 1);
 			printf("fct  :%s\n", ft_memccpy(av[1], av[2], 'y', 6));
 			printf("real :%s\n", memccpy(buf1, av[2], '0', 10));
-			printf("real :%s\n", memccpy(av[3], av[4], 'y', 6));*/
-
+			printf("real :%s\n", memccpy(av[3], av[4], 'y', 6));
+*/
 	printf("\nFT_STRNEW\n");
 	size_t	size = 514;
 	int j = 0;
