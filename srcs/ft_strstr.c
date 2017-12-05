@@ -6,7 +6,7 @@
 /*   By: lballiot <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 18:16:19 by lballiot          #+#    #+#             */
-/*   Updated: 2017/11/27 10:10:26 by lballiot         ###   ########.fr       */
+/*   Updated: 2017/12/05 22:13:51 by lballiot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@ char	*ft_strstr(char *str, char *to_find)
 {
 	int i;
 	int j;
-	int k;
 
 	i = 0;
 	if (to_find[0] == '\0')

@@ -6,7 +6,7 @@
 /*   By: lballiot <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 10:55:33 by lballiot          #+#    #+#             */
-/*   Updated: 2017/12/05 16:05:13 by lballiot         ###   ########.fr       */
+/*   Updated: 2017/12/05 22:18:11 by lballiot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ void			*ft_memchr(const void *s, int c, size_t n);
 
 int				ft_memcmp(const void *s1, const void *s2, size_t n);
 
-unsigned long	ft_strlen(const char *str);
+size_t	ft_strlen(const char *str);
 
 char			*ft_strdup(const char *src);
 

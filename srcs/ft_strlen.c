@@ -6,13 +6,13 @@
 /*   By: lballiot <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 10:53:18 by lballiot          #+#    #+#             */
-/*   Updated: 2017/11/14 10:11:37 by lballiot         ###   ########.fr       */
+/*   Updated: 2017/12/05 22:17:48 by lballiot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned long	ft_strlen(const char *str)
+size_t	ft_strlen(const char *str)
 {
-	unsigned long i;
+	size_t i;
 
 	i = 0;
 	while (str[i])

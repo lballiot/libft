@@ -6,7 +6,7 @@
 #    By: lballiot <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/13 10:48:12 by lballiot          #+#    #+#              #
-#    Updated: 2017/11/30 10:42:41 by lballiot         ###   ########.fr        #
+#    Updated: 2017/12/05 22:13:31 by lballiot         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -63,15 +63,13 @@ SRC = ./srcs/ft_memset.c \
 	  ./srcs/ft_putchar_fd.c \
 	  ./srcs//ft_putstr_fd.c \
 	  ./srcs/ft_putendl_fd.c \
-	  ./srcs/ft_putnbr_fd.c \
-
-
+	  ./srcs/ft_putnbr_fd.c
 
 OBJ = $(SRC:.c=.o)
 
-CC = gcc
+CC = gcc -Wall -Werror -Wextra
 
-CFLAGLS = -Wall -Werror -Wextra
+
 
 HPATH = -I includes/libft.h
 
