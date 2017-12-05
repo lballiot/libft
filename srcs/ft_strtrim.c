@@ -6,19 +6,29 @@
 /*   By: lballiot <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/23 11:32:35 by lballiot          #+#    #+#             */
-/*   Updated: 2017/11/23 12:21:43 by lballiot         ###   ########.fr       */
+/*   Updated: 2017/12/05 17:54:24 by lballiot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-char	*ft_strtrim(char const *s)
+static char		*copy(int i, const char *s, int start, int end)
 {
-	int i;
-	char *str;
-	int end;
-	int start;
+	char	*str;
 
+	if (!(str = (char*)malloc(sizeof(char) * i)))
+		return (NULL);
+	ft_strncpy(str, (const char *)s + start, i);
+	str[i] = '\0';
+	return (str);
+}
+
+char			*ft_strtrim(char const *s)
+{
+	int		i;
+	char	*str;
+	int		end;
+	int		start;
 
 	if (!s)
 		return (NULL);
@@ -36,9 +46,5 @@ char	*ft_strtrim(char const *s)
 	i = end - start + 1;
 	if (i < 0)
 		i = 0;
-	if (!(str = (char*)malloc(sizeof(char) * i)))
-		return (NULL);
-	ft_strncpy(str, (const char *)s + start, i);
-		
-	return (str);
+	return (copy(i, s, start, end));
 }

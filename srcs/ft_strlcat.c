@@ -6,7 +6,7 @@
 /*   By: lballiot <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/21 10:38:28 by lballiot          #+#    #+#             */
-/*   Updated: 2017/11/24 10:44:43 by lballiot         ###   ########.fr       */
+/*   Updated: 2017/12/05 16:10:44 by lballiot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,10 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	size_t  len;
-	size_t i;
-	char *dstcpy;
-	const char *srccpy;
-	
+	size_t		len;
+	size_t		i;
+	char		*dstcpy;
+	const char	*srccpy;
 
 	dstcpy = dst;
 	srccpy = src;
@@ -33,7 +32,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	{
 		if (i != 1)
 		{
-			*dstcpy++ = *srccpy;			
+			*dstcpy++ = *srccpy;
 			i--;
 		}
 		srccpy++;

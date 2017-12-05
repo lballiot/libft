@@ -6,7 +6,7 @@
 /*   By: lballiot <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/01 11:11:26 by lballiot          #+#    #+#             */
-/*   Updated: 2017/12/01 11:19:47 by lballiot         ###   ########.fr       */
+/*   Updated: 2017/12/05 17:34:55 by lballiot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ static int		ft_compteur(char const *s, int i, char ch)
 	return (compteur);
 }
 
-static char	**ft_remplissage(char const *s, int i, char **tab, char ch)
+static char		**ft_remplissage(char const *s, int i, char **tab, char ch)
 {
 	int		size;
 	int		j;
@@ -66,19 +66,23 @@ static char	**ft_remplissage(char const *s, int i, char **tab, char ch)
 	return (tab);
 }
 
-char	**ft_strsplit(char const *s, char c)
+char			**ft_strsplit(char const *s, char c)
 {
 	char	ch;
 	int		i;
 	char	**tab;
 	int		compteur;
 
-	ch = (char)c;
-	i = 0;
-	compteur = ft_compteur(s, i, ch);
-	if (!(tab = malloc(sizeof(char*) * (compteur + 1))))
-		return (0);
-	i = 0;
-	tab = ft_remplissage(s, -1, tab, ch);
-	return (tab);
+	if (s)
+	{
+		ch = (char)c;
+		i = 0;
+		compteur = ft_compteur(s, i, ch);
+		if (!(tab = malloc(sizeof(char*) * (compteur + 1))))
+			return (0);
+		i = 0;
+		tab = ft_remplissage(s, -1, tab, ch);
+		return (tab);
+	}
+	return (NULL);
 }

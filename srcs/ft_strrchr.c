@@ -6,7 +6,7 @@
 /*   By: lballiot <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/24 11:07:06 by lballiot          #+#    #+#             */
-/*   Updated: 2017/11/24 11:07:10 by lballiot         ###   ########.fr       */
+/*   Updated: 2017/12/05 16:07:54 by lballiot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,15 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	size_t i;
-	char *cpy;
+	size_t	i;
+	char	*cpy;
 
 	i = -1;
 	cpy = NULL;
 	while (s[++i] != '\0')
 		if (s[i] == c)
 			cpy = (char *)&s[i];
-	
 	if (s[i] == c)
 		cpy = (char *)&s[i];
-	
 	return (cpy);
 }
