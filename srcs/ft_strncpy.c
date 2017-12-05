@@ -17,17 +17,17 @@ char	*ft_strncpy(char *dest, const char *src, unsigned int n)
 	int i;
 
 	i = 0;
-
-	if (!src[i] && n > 0)
+	if (src || dest)
 	{
-		dest = ft_memset(dest,'\0', ft_strlen(dest));
-		return(dest);
+		while (n && src[i] != '\0')
+		{
+			dest[i] = src[i];
+			i++;
+			n--;
+		}
+		while (n--)
+			dest[i++] = '\0';
+		return (dest);
 	}
-	while (n > 0)
-	{
-		dest[i] = src[i];
-		i++;
-		n--;
-	}
-	return (dest);
+	return (NULL);
 }

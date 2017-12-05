@@ -12,7 +12,7 @@
 
 #include "../includes/libft.h"
 
-int		ft_compteur(char const *s, int i, char ch)
+static int		ft_compteur(char const *s, int i, char ch)
 {
 	int		compteur;
 
@@ -37,7 +37,7 @@ int		ft_compteur(char const *s, int i, char ch)
 	return (compteur);
 }
 
-char	**ft_remplissage(char const *s, int i, char **tab, char ch)
+static char	**ft_remplissage(char const *s, int i, char **tab, char ch)
 {
 	int		size;
 	int		j;

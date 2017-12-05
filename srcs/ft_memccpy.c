@@ -14,5 +14,27 @@
 
 void	*ft_memccpy(void *dst, void *src, int c, size_t n)
 {
-	return ((void *)dst);
+
+	char *ret;
+	const char *srccpy;
+	int i;
+	
+
+	i = 0;
+	ret = dst;
+	srccpy = src;
+	if (src || dst)
+	{
+		
+		while (n != 0)
+		{
+			
+			ret[i] = srccpy[i];
+			if (srccpy[i] == (char)c)
+				return (&ret[i + 1]);
+			i++;
+			n--;
+		}
+	}
+	return (NULL);
 }

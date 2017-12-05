@@ -12,46 +12,72 @@
 
 #include "../includes/libft.h"
 
-int		ft_nbdigit(int n)
+static char *ft_revers(char *str)
 {
-	int		i;
+	
+	int len;
+	int i;
+	char tmp;
 
-	i = 1;
-	if (n < 0)
+	len = ft_strlen(str) - 1;
+	i = 0;
+	if (str[i] == '-')
 		i++;
-	while (n /= 10)
+	while (i < len)
+	{
+		tmp = str[i];
+		str[i] = str[len];
+		str[len] = tmp;
 		i++;
-	return (i);
+		len--;
+	}
+	return (str);
 }
+
+static int ft_long_int(int n)
+{
+	
+	int ret;
+
+	ret = 1;
+	if (n < 0)
+	{
+		ret++;
+		n = n * -1;
+	}
+	while (n > 0)
+	{
+		n = n / 10;
+		ret++;
+	}
+	return (ret);
+}
+
 
 char	*ft_itoa(int n)
 {
-	char	*str;
-	int		size;
-	int		j;
-	int		neg;
-
-	size = ft_nbdigit(n);
+	char *ret;
+	int i;
+	
+	i = 0;
+	if (!(ret = (char *)malloc(sizeof(char) * ft_long_int(n) + 1)))
+		return (NULL);
 	if (n == -2147483648)
 		return (ft_strdup("-2147483648"));
-	if(!(str = (char *)malloc(sizeof(char) * size + 1)))
-		return (NULL);
-	str[size] = '\0';
-	j = size - 1;
 	if (n < 0)
 	{
-		neg = 1;
-		n = -n;
+		ret[i++] = '-';
+		n = n * -1;
 	}
-	while (size > 0)
+	while (n >= 10 && n <= 2147483647)
 	{
-		str[j] = n % 10 + 48;
+		ret[i++] = n % 10 + '0';
 		n = n / 10;
-		size--;
-		j--;
 	}
-	if (neg == 1)
-		str[size] = '-';
-return (str);
+	if (n < 10)
+		ret[i++] = n + '0';
+	ret[i] = '\0';
+	ret = ft_revers(ret);
+	return (ret);
 }
-//	printf("n %d\n", n);
+

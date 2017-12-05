@@ -39,6 +39,6 @@ char	*ft_strtrim(char const *s)
 	if (!(str = (char*)malloc(sizeof(char) * i)))
 		return (NULL);
 	ft_strncpy(str, (const char *)s + start, i);
-
+		
 	return (str);
 }
