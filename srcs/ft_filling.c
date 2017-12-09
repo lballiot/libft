@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_filling.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lballiot <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/12/09 17:50:57 by lballiot          #+#    #+#             */
+/*   Updated: 2017/12/09 17:51:05 by lballiot         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../includes/libft.h"
 
 char	**ft_filling(char const *s, int i, char **tab, char ch)
@@ -5,7 +17,7 @@ char	**ft_filling(char const *s, int i, char **tab, char ch)
 	int	size;
 	int	j;
 	int	i_tab;
-	
+
 	i_tab = 0;
 	while (s[++i])
 		if (s[i] == ch || i == 0)
@@ -26,5 +38,5 @@ char	**ft_filling(char const *s, int i, char **tab, char ch)
 				tab[i_tab++][j] = '\0';
 		}
 	tab[i_tab] = NULL;
-	return (tab);	
+	return (tab);
 }

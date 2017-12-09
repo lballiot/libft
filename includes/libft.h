@@ -6,7 +6,7 @@
 /*   By: lballiot <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 10:55:33 by lballiot          #+#    #+#             */
-/*   Updated: 2017/12/05 22:18:11 by lballiot         ###   ########.fr       */
+/*   Updated: 2017/12/09 17:19:41 by lballiot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,11 @@
 
 typedef struct	s_list
 {
-	
-	void		*content;
-	size_t		content_size;
-	struct s_list		*next;
-	
-}	            t_list;
+
+	void			*content;
+	size_t			content_size;
+	struct s_list	*next;
+}				t_list;
 
 void			*ft_memset(void *s, int c, size_t n);
 
@@ -139,7 +138,7 @@ void			ft_lstadd(t_list **alst, t_list *new);
 
 void			ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 
-t_list			*ft_lstmap(t_list *lst, t_list * (*f)(t_list *elem));
+t_list			*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 
 char			*ft_revers(char *str);
 

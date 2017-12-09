@@ -1,9 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_counter.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lballiot <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/12/09 17:50:18 by lballiot          #+#    #+#             */
+/*   Updated: 2017/12/09 17:50:33 by lballiot         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../includes/libft.h"
 
 int		ft_counter(char const *s, int i, char ch)
 {
 	int	compteur;
-	
+
 	if (s[i] != ch)
 		compteur = 1;
 	if ((s[i] == ch))
@@ -22,5 +34,5 @@ int		ft_counter(char const *s, int i, char ch)
 		}
 		i++;
 	}
-   return (compteur);
+	return (compteur);
 }

@@ -6,7 +6,7 @@
 /*   By: lballiot <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/23 11:32:35 by lballiot          #+#    #+#             */
-/*   Updated: 2017/12/05 22:15:01 by lballiot         ###   ########.fr       */
+/*   Updated: 2017/12/09 17:23:33 by lballiot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 static char		*ft_copy(int i, const char *s, int start)
 {
 	char		*str;
-	
+
 	if (!(str = (char*)malloc(sizeof(char) * i)))
 		return (NULL);
 	ft_strncpy(str, (const char *)s + start, i);

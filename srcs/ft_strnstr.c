@@ -6,7 +6,7 @@
 /*   By: lballiot <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 10:22:49 by lballiot          #+#    #+#             */
-/*   Updated: 2017/11/14 11:42:18 by lballiot         ###   ########.fr       */
+/*   Updated: 2017/12/09 17:24:59 by lballiot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,19 +15,17 @@
 char	*ft_strnstr(char *str, char *to_find, int n)
 {
 	const char	*cpy;
-	
+
 	cpy = str;
 	if (*to_find == '\0')
 		return ((char *)cpy);
-		while (*cpy && n)
-		{
-			if (ft_memcmp(cpy, to_find, ft_strlen(to_find)) == 0
+	while (*cpy && n)
+	{
+		if (ft_memcmp(cpy, to_find, ft_strlen(to_find)) == 0
 				&& (size_t)n >= ft_strlen(to_find))
-				return ((char *)cpy);
-			cpy++;
-			n--;
-		}
-	
+			return ((char *)cpy);
+		cpy++;
+		n--;
+	}
 	return (NULL);
-
 }
