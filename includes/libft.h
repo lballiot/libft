@@ -13,12 +13,17 @@
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <assert.h>
 # include <unistd.h>
-# include <stdio.h>
-# include <string.h>
 # include <stdlib.h>
-# include <ctype.h>
+
+typedef struct	s_list
+{
+	
+	void		*content;
+	size_t		content_size;
+	struct s_list		*next;
+	
+}	            t_list;
 
 void			*ft_memset(void *s, int c, size_t n);
 
@@ -34,7 +39,7 @@ void			*ft_memchr(const void *s, int c, size_t n);
 
 int				ft_memcmp(const void *s1, const void *s2, size_t n);
 
-size_t	ft_strlen(const char *str);
+size_t			ft_strlen(const char *str);
 
 char			*ft_strdup(const char *src);
 
@@ -123,5 +128,27 @@ void			ft_putstr_fd(char const *s, int fd);
 void			ft_putendl_fd(char const *s, int fd);
 
 void			ft_putnbr_fd(int n, int fd);
+
+t_list			*ft_lstnew(void const *content, size_t content_size);
+
+void			ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
+
+void			ft_lstdel(t_list **alst, void (*del)(void *, size_t));
+
+void			ft_lstadd(t_list **alst, t_list *new);
+
+void			ft_lstiter(t_list *lst, void (*f)(t_list *elem));
+
+t_list			*ft_lstmap(t_list *lst, t_list * (*f)(t_list *elem));
+
+char			*ft_revers(char *str);
+
+int				ft_long_int(int n);
+
+int				ft_counter(char const *s, int i, char ch);
+
+char			**ft_filling(char const *s, int i, char **tab, char ch);
+
+void			ft_swap(int *a, int *b);
 
 #endif

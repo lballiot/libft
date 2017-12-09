@@ -12,10 +12,10 @@
 
 #include "../includes/libft.h"
 
-static char		*copy(int i, const char *s, int start)
+static char		*ft_copy(int i, const char *s, int start)
 {
-	char	*str;
-
+	char		*str;
+	
 	if (!(str = (char*)malloc(sizeof(char) * i)))
 		return (NULL);
 	ft_strncpy(str, (const char *)s + start, i);
@@ -46,5 +46,5 @@ char			*ft_strtrim(char const *s)
 	i = end - start + 1;
 	if (i < 0)
 		i = 0;
-	return (copy(i, s, start));
+	return (ft_copy(i, s, start));
 }

@@ -10,30 +10,24 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "../includes/libft.h"
+
 char	*ft_strnstr(char *str, char *to_find, int n)
 {
-	int i;
-	int j;
-	int k;
-
-	i = 0;
-	j = i;
+	const char	*cpy;
+	
+	cpy = str;
 	if (*to_find == '\0')
-		return (str);
-	while (str[i] && to_find[j] && n >= 1)
-	{
-		if (str[i] != to_find[j] && n >= 1)
+		return ((char *)cpy);
+		while (*cpy && n)
 		{
+			if (ft_memcmp(cpy, to_find, ft_strlen(to_find)) == 0
+				&& (size_t)n >= ft_strlen(to_find))
+				return ((char *)cpy);
+			cpy++;
 			n--;
-			i++;
 		}
-		if (str[i] == to_find[j])
-			k = i;
-		while (str[i] == to_find[j] && str[i++] != '\0' && to_find[j++] != '\0'
-				&& n-- >= 1)
-			if (to_find[j] == '\0')
-				return (&str[k]);
-		j = 0;
-	}
-	return (0);
+	
+	return (NULL);
+
 }

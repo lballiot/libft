@@ -1,16 +1,5 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: lballiot <marvin@42.fr>                    +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2017/11/13 10:48:12 by lballiot          #+#    #+#              #
-#    Updated: 2017/12/05 22:13:31 by lballiot         ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
-
 NAME = libft.a
+
 SRC = ./srcs/ft_memset.c \
 	  ./srcs/ft_bzero.c \
 	  ./srcs/ft_memcpy.c \
@@ -63,13 +52,24 @@ SRC = ./srcs/ft_memset.c \
 	  ./srcs/ft_putchar_fd.c \
 	  ./srcs//ft_putstr_fd.c \
 	  ./srcs/ft_putendl_fd.c \
-	  ./srcs/ft_putnbr_fd.c
+	  ./srcs/ft_putnbr_fd.c \
+	./srcs/ft_lstadd.c \
+	./srcs/ft_lstnew.c \
+	./srcs/ft_lstdelone.c \
+	./srcs/ft_lstdel.c \
+	./srcs/ft_lstiter.c \
+	./srcs/ft_lstmap.c \
+	./srcs/ft_revers.c \
+	./srcs/ft_long_int.c \
+	./srcs/ft_filling.c \
+	./srcs/ft_counter.c \
+	./srcs/ft_swap.c
 
 OBJ = $(SRC:.c=.o)
 
-CC = gcc -Wall -Werror -Wextra
+CC = gcc 
 
-
+CFLAGS = -Wall -Werror -Wextra
 
 HPATH = -I includes/libft.h
 

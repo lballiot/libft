@@ -12,45 +12,6 @@
 
 #include "../includes/libft.h"
 
-static char		*ft_revers(char *str)
-{
-	int		len;
-	int		i;
-	char	tmp;
-
-	len = ft_strlen(str) - 1;
-	i = 0;
-	if (str[i] == '-')
-		i++;
-	while (i < len)
-	{
-		tmp = str[i];
-		str[i] = str[len];
-		str[len] = tmp;
-		i++;
-		len--;
-	}
-	return (str);
-}
-
-static int		ft_long_int(int n)
-{
-	int		ret;
-
-	ret = 1;
-	if (n < 0)
-	{
-		ret++;
-		n = n * -1;
-	}
-	while (n > 0)
-	{
-		n = n / 10;
-		ret++;
-	}
-	return (ret);
-}
-
 char			*ft_itoa(int n)
 {
 	char	*ret;
