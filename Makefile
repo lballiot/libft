@@ -85,12 +85,12 @@ CC = gcc
 
 CFLAGS = -Wall -Werror -Wextra
 
-HPATH = libft.h
+
 
 RM = rm -rf
 
 $(NAME) :
-	$(CC) -c $(CFLAGS) $(HPATH) $(SRC)
+	$(CC) -c $(CFLAGS) $(SRC) -I .
 	ar rc $(NAME) $(OBJ)
 	ranlib $(NAME)
 

@@ -56,7 +56,7 @@ char			*ft_strchr(const char *s, int c);
 
 char			*ft_strstr(char *src, char *str);
 
-char			*ft_strnstr(char *str, char *to_find, int n);
+char			*ft_strnstr(const char *str, const char *to_find, size_t n);
 
 char			*ft_strrchr(const char *s, int c);
 

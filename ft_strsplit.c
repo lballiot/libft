@@ -14,20 +14,16 @@
 
 char			**ft_strsplit(char const *s, char c)
 {
-	char	ch;
-	int		i;
 	char	**tab;
 	int		counter;
 
+
 	if (s)
 	{
-		ch = (char)c;
-		i = 0;
-		counter = ft_counter(s, ch);
+		counter = ft_counter(s, c);
 		if (!(tab = malloc(sizeof(char*) * (counter + 1))))
 			return (0);
-		i = 0;
-		tab = ft_filling(s, -1, tab, ch);
+		tab = ft_filling(s, -1, tab, c);
 		return (tab);
 	}
 	return (NULL);
