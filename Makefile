@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: lballiot <marvin@42.fr>                    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2017/12/09 18:13:52 by lballiot          #+#    #+#              #
+#    Updated: 2017/12/11 11:51:58 by lballiot         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 NAME = libft.a
 
 SRC = ./srcs/ft_memset.c \
@@ -53,27 +65,32 @@ SRC = ./srcs/ft_memset.c \
 	  ./srcs//ft_putstr_fd.c \
 	  ./srcs/ft_putendl_fd.c \
 	  ./srcs/ft_putnbr_fd.c \
-	./srcs/ft_lstadd.c \
-	./srcs/ft_lstnew.c \
-	./srcs/ft_lstdelone.c \
-	./srcs/ft_lstdel.c \
-	./srcs/ft_lstiter.c \
-	./srcs/ft_lstmap.c \
-	./srcs/ft_revers.c \
-	./srcs/ft_long_int.c \
-	./srcs/ft_filling.c \
-	./srcs/ft_counter.c \
-	./srcs/ft_swap.c
+	  ./srcs/ft_lstadd.c \
+	  ./srcs/ft_lstnew.c \
+	  ./srcs/ft_lstdelone.c \
+	  ./srcs/ft_lstdel.c \
+	  ./srcs/ft_lstiter.c \
+	  ./srcs/ft_lstmap.c \
+	  ./srcs/ft_long_int.c \
+	  ./srcs/ft_filling.c \
+	  ./srcs/ft_counter.c \
+	  ./srcs/ft_swap.c \
+	  ./srcs/ft_is_negative.c \
+	  ./srcs/ft_strrev.c \
+	  ./srcs/ft_is_spaces.c
 
 OBJ = $(SRC:.c=.o)
 
-CC = gcc 
+CC = gcc
 
 CFLAGS = -Wall -Werror -Wextra
 
 HPATH = -I includes/libft.h
 
 RM = rm -rf
+
+%.o : %.c
+	$(CC) $(CFLAGS) $(HPATH) -o $@ -c $<
 
 $(NAME) : $(OBJ)
 	ar rc $(NAME) $(OBJ)

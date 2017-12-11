@@ -6,7 +6,7 @@
 /*   By: lballiot <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 10:55:33 by lballiot          #+#    #+#             */
-/*   Updated: 2017/12/09 17:19:41 by lballiot         ###   ########.fr       */
+/*   Updated: 2017/12/11 11:11:31 by lballiot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -140,14 +140,18 @@ void			ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 
 t_list			*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 
-char			*ft_revers(char *str);
-
 int				ft_long_int(int n);
 
-int				ft_counter(char const *s, int i, char ch);
+int				ft_counter(char const *s, char ch);
 
 char			**ft_filling(char const *s, int i, char **tab, char ch);
 
 void			ft_swap(int *a, int *b);
+
+char			*ft_strrev(char *str);
+
+int				ft_is_negative(int n);
+
+int				ft_is_spaces(char *s);
 
 #endif

@@ -1,40 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_counter.c                                       :+:      :+:    :+:   */
+/*   ft_strrev.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lballiot <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/12/09 17:50:18 by lballiot          #+#    #+#             */
-/*   Updated: 2017/12/11 10:44:39 by lballiot         ###   ########.fr       */
+/*   Created: 2017/07/12 14:02:48 by lballiot          #+#    #+#             */
+/*   Updated: 2017/12/11 11:07:08 by lballiot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-int		ft_counter(char const *s, char ch)
+char	*ft_strrev(char *str)
 {
-	int	compteur;
-	int	i;
+	int strrev[8];
+	int i;
 
 	i = 0;
-	if (s[i] != ch)
-		compteur = 1;
-	if ((s[i] == ch))
-		compteur = 0;
-	while (s[i])
+	while (*str)
 	{
-		if (s[i] == ch || i == 0)
-		{
-			while ((s[i] == ch && s[i]))
-				i++;
-			if ((s[i] != ch && s[i] != '\0'))
-				compteur++;
-			while ((s[i] != ch && s[i]))
-				i++;
-			i--;
-		}
-		i++;
+		*strrev = str[i];
+		str[i]++;
 	}
-	return (compteur);
+	*str = *strrev;
+	return (str);
 }

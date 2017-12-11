@@ -1,40 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_counter.c                                       :+:      :+:    :+:   */
+/*   ft_is_spaces.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lballiot <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/12/09 17:50:18 by lballiot          #+#    #+#             */
-/*   Updated: 2017/12/11 10:44:39 by lballiot         ###   ########.fr       */
+/*   Created: 2017/12/11 10:57:43 by lballiot          #+#    #+#             */
+/*   Updated: 2017/12/11 11:02:40 by lballiot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
-
-int		ft_counter(char const *s, char ch)
+int		ft_is_spaces(char *s)
 {
-	int	compteur;
-	int	i;
+	int i;
 
 	i = 0;
-	if (s[i] != ch)
-		compteur = 1;
-	if ((s[i] == ch))
-		compteur = 0;
+	if (!s)
+		return (0);
 	while (s[i])
 	{
-		if (s[i] == ch || i == 0)
-		{
-			while ((s[i] == ch && s[i]))
-				i++;
-			if ((s[i] != ch && s[i] != '\0'))
-				compteur++;
-			while ((s[i] != ch && s[i]))
-				i++;
-			i--;
-		}
+		if (s[i] == ' ')
+			return (1);
 		i++;
 	}
-	return (compteur);
+	return (0);
 }

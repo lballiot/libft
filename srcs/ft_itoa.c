@@ -6,13 +6,34 @@
 /*   By: lballiot <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/24 10:40:23 by lballiot          #+#    #+#             */
-/*   Updated: 2017/12/05 16:14:09 by lballiot         ###   ########.fr       */
+/*   Updated: 2017/12/11 11:06:35 by lballiot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-char			*ft_itoa(int n)
+static char	*ft_revers(char *str)
+{
+	int		len;
+	int		i;
+	char	tmp;
+
+	len = ft_strlen(str) - 1;
+	i = 0;
+	if (str[i] == '-')
+		i++;
+	while (i < len)
+	{
+		tmp = str[i];
+		str[i] = str[len];
+		str[len] = tmp;
+		i++;
+		len--;
+	}
+	return (str);
+}
+
+char		*ft_itoa(int n)
 {
 	char	*ret;
 	int		i;

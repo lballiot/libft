@@ -1,34 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_revers.c                                        :+:      :+:    :+:   */
+/*   ft_is_negative.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lballiot <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/12/09 17:25:21 by lballiot          #+#    #+#             */
-/*   Updated: 2017/12/09 17:25:34 by lballiot         ###   ########.fr       */
+/*   Created: 2017/11/06 17:23:03 by lballiot          #+#    #+#             */
+/*   Updated: 2017/12/11 11:06:02 by lballiot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
-
-char	*ft_revers(char *str)
+int	ft_is_negative(int n)
 {
-	int		len;
-	int		i;
-	char	tmp;
-
-	len = ft_strlen(str) - 1;
-	i = 0;
-	if (str[i] == '-')
-		i++;
-	while (i < len)
-	{
-		tmp = str[i];
-		str[i] = str[len];
-		str[len] = tmp;
-		i++;
-		len--;
-	}
-	return (str);
+	if (n < 0)
+		return (1);
+	else
+		return (0);
 }
