@@ -6,7 +6,7 @@
 #    By: lballiot <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/12/09 18:13:52 by lballiot          #+#    #+#              #
-#    Updated: 2017/12/11 14:48:04 by lballiot         ###   ########.fr        #
+#    Updated: 2017/12/14 12:01:04 by lballiot         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -85,12 +85,12 @@ CC = gcc
 
 CFLAGS = -Wall -Werror -Wextra
 
-
+HPATH = -I libft.h
 
 RM = rm -rf
 
 $(NAME) :
-	$(CC) -c $(CFLAGS) $(SRC) -I .
+	$(CC) -c $(CFLAGS) $(HPATH) $(SRC)
 	ar rc $(NAME) $(OBJ)
 	ranlib $(NAME)
 

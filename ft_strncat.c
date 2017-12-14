@@ -6,11 +6,13 @@
 /*   By: lballiot <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/21 10:13:03 by lballiot          #+#    #+#             */
-/*   Updated: 2017/11/21 10:13:16 by lballiot         ###   ########.fr       */
+/*   Updated: 2017/12/14 12:40:05 by lballiot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strncat(char *dest, const char *src, unsigned int n)
+#include "libft.h"
+
+char	*ft_strncat(char *dest, const char *src, size_t n)
 {
 	int i;
 	int j;
