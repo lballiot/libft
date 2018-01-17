@@ -6,22 +6,25 @@
 /*   By: lballiot <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 10:22:49 by lballiot          #+#    #+#             */
-/*   Updated: 2017/12/14 12:44:01 by lballiot         ###   ########.fr       */
+/*   Updated: 2017/12/11 13:58:23 by lballiot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *str, const char *to_find, size_t n)
+char	*ft_strnstr(char *str, char *to_find, int n)
 {
+	const char	*cpy;
+
+	cpy = str;
 	if (*to_find == '\0')
-		return ((char *)str);
-	while (*str && n)
+		return ((char *)cpy);
+	while (*cpy && n)
 	{
-		if (ft_memcmp(str, to_find, ft_strlen(to_find)) == 0
-				&& n >= ft_strlen(to_find))
-			return ((char *)str);
-		str++;
+		if (ft_memcmp(cpy, to_find, ft_strlen(to_find)) == 0
+				&& (size_t)n >= ft_strlen(to_find))
+			return ((char *)cpy);
+		cpy++;
 		n--;
 	}
 	return (NULL);

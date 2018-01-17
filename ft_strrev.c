@@ -6,7 +6,7 @@
 /*   By: lballiot <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/12 14:02:48 by lballiot          #+#    #+#             */
-/*   Updated: 2017/12/11 13:58:40 by lballiot         ###   ########.fr       */
+/*   Updated: 2018/01/17 14:47:08 by lballiot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,14 @@
 
 char	*ft_strrev(char *str)
 {
-	int strrev[8];
-	int i;
+	char	*strrev;
+	int		i;
+	int		t;
 
-	i = 0;
-	while (*str)
-	{
-		*strrev = str[i];
-		str[i]++;
-	}
-	*str = *strrev;
-	return (str);
+	t = 0;
+	i = ft_strlen(str) - 1;
+	strrev = ft_strnew(ft_strlen(str));
+	while (str[i])
+		strrev[t++] = str[i--];
+	return (strrev);
 }

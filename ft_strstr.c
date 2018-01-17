@@ -6,18 +6,18 @@
 /*   By: lballiot <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 18:16:19 by lballiot          #+#    #+#             */
-/*   Updated: 2017/12/14 12:41:26 by lballiot         ###   ########.fr       */
+/*   Updated: 2017/12/05 22:13:51 by lballiot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strstr(const char *str, const char *to_find)
+char	*ft_strstr(char *str, char *to_find)
 {
 	int i;
 	int j;
 
 	i = 0;
 	if (to_find[0] == '\0')
-		return ((char *)str);
+		return (str);
 	while (str[i])
 	{
 		j = 0;
@@ -25,7 +25,7 @@ char	*ft_strstr(const char *str, const char *to_find)
 		{
 			j++;
 			if (to_find[j] == '\0')
-				return ((char *)str + i);
+				return (str + i);
 		}
 		i++;
 	}

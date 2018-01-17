@@ -6,7 +6,7 @@
 #    By: lballiot <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/12/09 18:13:52 by lballiot          #+#    #+#              #
-#    Updated: 2017/12/14 12:01:04 by lballiot         ###   ########.fr        #
+#    Updated: 2017/12/14 10:48:26 by lballiot         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -85,7 +85,7 @@ CC = gcc
 
 CFLAGS = -Wall -Werror -Wextra
 
-HPATH = -I libft.h
+HPATH = -I .
 
 RM = rm -rf
 
