@@ -6,7 +6,7 @@
 /*   By: lballiot <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 10:55:33 by lballiot          #+#    #+#             */
-/*   Updated: 2017/12/11 11:11:31 by lballiot         ###   ########.fr       */
+/*   Updated: 2018/02/22 11:44:31 by lballiot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,6 +106,8 @@ char			*ft_strsub(char const *s, unsigned int start, size_t len);
 
 char			*ft_strjoin(char const *s1, char const *s2);
 
+char			*ft_strjoin_and_free(char *s1, char *s2);
+
 char			*ft_strtrim(char const *s);
 
 char			**ft_strsplit(char const *s, char c);
@@ -140,6 +142,8 @@ void			ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 
 t_list			*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 
+void			ft_del_new(char **str, int i);
+
 int				ft_long_int(int n);
 
 int				ft_counter(char const *s, char ch);
@@ -153,5 +157,9 @@ char			*ft_strrev(char *str);
 int				ft_is_negative(int n);
 
 int				ft_is_spaces(char *s);
+
+int				ft_find_last_char(char *str, char c);
+
+int				ft_find_first_char(char *str, char c);
 
 #endif

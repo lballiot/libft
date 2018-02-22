@@ -1,28 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrev.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin_and_free.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lballiot <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/07/12 14:02:48 by lballiot          #+#    #+#             */
-/*   Updated: 2017/12/11 13:58:40 by lballiot         ###   ########.fr       */
+/*   Created: 2018/02/22 11:49:21 by lballiot          #+#    #+#             */
+/*   Updated: 2018/02/22 11:56:22 by lballiot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrev(char *str)
+char	*ft_strjoin_and_free(char *s1, char *s2)
 {
-	int strrev[8];
-	int i;
+	char		*dest;
 
-	i = 0;
-	while (*str)
+	dest = NULL;
+	if (s1 && s2)
 	{
-		*strrev = str[i];
-		str[i]++;
+		dest = ft_memalloc(ft_strlen(s1) + ft_strlen(s2) + 1);
+		if (dest)
+		{
+			dest = ft_strcpy(dest, s1);
+			dest = ft_strcat(dest, s2);
+			free(s1);
+			ft_strclr(s2);
+			return (dest);
+		}
 	}
-	*str = *strrev;
-	return (str);
+	free(&dest);
+	return (NULL);
 }

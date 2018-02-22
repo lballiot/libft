@@ -1,28 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrev.c                                        :+:      :+:    :+:   */
+/*   ft_find_first_char.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lballiot <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/07/12 14:02:48 by lballiot          #+#    #+#             */
-/*   Updated: 2017/12/11 13:58:40 by lballiot         ###   ########.fr       */
+/*   Created: 2018/02/22 11:42:35 by lballiot          #+#    #+#             */
+/*   Updated: 2018/02/22 12:00:50 by lballiot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrev(char *str)
-{
-	int strrev[8];
-	int i;
+/*
+** function that return the location of the first char send in params
+*/
 
-	i = 0;
-	while (*str)
+int		ft_find_first_char(char *str, char c)
+{
+	int i;
+	int t;
+
+	i = ft_strlen(str);
+	t = 0;
+	while (str[t] != c && str[t] != '\0')
 	{
-		*strrev = str[i];
-		str[i]++;
+		t++;
+		i--;
 	}
-	*str = *strrev;
-	return (str);
+	return (t);
 }

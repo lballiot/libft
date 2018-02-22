@@ -1,28 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrev.c                                        :+:      :+:    :+:   */
+/*   ft_del_new.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lballiot <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/07/12 14:02:48 by lballiot          #+#    #+#             */
-/*   Updated: 2017/12/11 13:58:40 by lballiot         ###   ########.fr       */
+/*   Created: 2018/02/22 11:59:52 by lballiot          #+#    #+#             */
+/*   Updated: 2018/02/22 12:00:06 by lballiot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrev(char *str)
+void	ft_del_new(char **str, int i)
 {
-	int strrev[8];
-	int i;
-
-	i = 0;
-	while (*str)
-	{
-		*strrev = str[i];
-		str[i]++;
-	}
-	*str = *strrev;
-	return (str);
+	free(*str);
+	*str = ft_strnew(i);
 }

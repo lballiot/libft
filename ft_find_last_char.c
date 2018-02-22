@@ -1,28 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrev.c                                        :+:      :+:    :+:   */
+/*   ft_find_last_char.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lballiot <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/07/12 14:02:48 by lballiot          #+#    #+#             */
-/*   Updated: 2017/12/11 13:58:40 by lballiot         ###   ########.fr       */
+/*   Created: 2018/02/22 11:31:35 by lballiot          #+#    #+#             */
+/*   Updated: 2018/02/22 11:59:34 by lballiot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrev(char *str)
+/*
+** function that return the location of the last char find send in params
+*/
+
+int		ft_find_last_char(char *str, char c)
 {
-	int strrev[8];
 	int i;
 
 	i = 0;
-	while (*str)
-	{
-		*strrev = str[i];
-		str[i]++;
-	}
-	*str = *strrev;
-	return (str);
+	while (str[i] == c && str[i] != '\0')
+		i++;
+	return (i);
 }
