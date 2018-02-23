@@ -6,7 +6,7 @@
 #    By: lballiot <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/12/09 18:13:52 by lballiot          #+#    #+#              #
-#    Updated: 2018/02/22 11:44:41 by lballiot         ###   ########.fr        #
+#    Updated: 2018/02/23 12:38:38 by lballiot         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -94,15 +94,15 @@ HPATH = -I .
 RM = rm -rf
 
 $(NAME) :
-	$(CC) -c $(CFLAGS) $(HPATH) $(SRC)
-	ar rc $(NAME) $(OBJ)
-	ranlib $(NAME)
+	@$(CC) -c $(CFLAGS) $(HPATH) $(SRC)
+	@ar rc $(NAME) $(OBJ)
+	@ranlib $(NAME)
 
 clean :
-	$(RM) $(OBJ)
+	@$(RM) $(OBJ)
 
 fclean : clean
-	$(RM) $(NAME)
+	@$(RM) $(NAME)
 
 re : fclean all
 
