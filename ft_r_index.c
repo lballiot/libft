@@ -1,19 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd.c                                        :+:      :+:    :+:   */
+/*   ft_r_index.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lballiot <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/12/09 17:17:22 by lballiot          #+#    #+#             */
-/*   Updated: 2018/02/28 14:25:46 by lballiot         ###   ########.fr       */
+/*   Created: 2018/03/08 12:20:42 by lballiot          #+#    #+#             */
+/*   Updated: 2018/03/08 12:20:44 by lballiot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd(t_list **alst, t_list *new)
+/*
+** function that return the location of the last char find send in params
+*/
+
+int		ft_r_index(char *str, char c)
 {
-	new->next = *alst;
-	*alst = new;
+	int i;
+
+	i = 0;
+	if (str[i] == c && str[i] != '\0')
+		i++;
+	return (i);
 }
